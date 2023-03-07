@@ -12,6 +12,11 @@
                 
             </div>
             <div class="form-group">
+                <label for="exampleInputEmail1">Tên đường dẫn</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="slug" value="{{$cate->slug}}">
+                
+            </div>
+            <div class="form-group">
                 <label for="exampleInputPassword1">Trạng thái</label>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">

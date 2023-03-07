@@ -166,7 +166,7 @@
 <!-- sản phẩm tivi -->
 <div class="container lg:w-11/12 w-11/12 lg:mx-auto mx-0 mt-14">
     <div>
-        <h3 class="lg:text-4xl text-2xl  lg:mb-8 ml-3">TV SHELF</h3>
+        <h3 class="lg:text-4xl text-2xl  lg:mb-8 ml-3">KỆ TIVI</h3>
     </div>
     <div class="grid lg:grid-cols-4 grid-cols-2 lg:gap-3 gap-2 ml-5 relative">
         <div class="product_item">
@@ -177,7 +177,7 @@
                 <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
             </a>
             <div class=" lg:mt-20 mt-2   mx-auto text-center">
-                <P class="text-xs opacity-60">TV SHELF</P>
+                <P class="text-xs opacity-60">KỆ TIVI</P>
                 <a class="link_sofa" href="sofa-detail.html">
                     <h4>LIVING ROOM TV SHELT</h4>
                 </a>
@@ -192,7 +192,7 @@
                 <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
             </a>
             <div class=" lg:mt-20 mt-2   mx-auto text-center">
-                <P class="text-xs opacity-60">TV SHELF</P>
+                <P class="text-xs opacity-60">KỆ TIVI</P>
                 <a class="link_sofa" href="sofa-detail.html">
                     <h4>NATURAL WOODEN SHELVELS</h4>
                 </a>
@@ -207,7 +207,7 @@
                 <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
             </a>
             <div class=" lg:mt-20 mt-2   mx-auto text-center">
-                <P class="text-xs opacity-60">TV SHELF</P>
+                <P class="text-xs opacity-60">KỆ TIVI</P>
                 <a class="link_sofa" href="sofa-detail.html">
                     <h4>PREMIUM NATURAL WOODEN Shelves</h4>
                 </a>
@@ -237,7 +237,7 @@
                 <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
             </a>
             <div class=" lg:mt-20 mt-2   mx-auto text-center">
-                <P class="text-xs opacity-60"> TV SHELF</P>
+                <P class="text-xs opacity-60"> KỆ TIVI</P>
                 <a class="link_sofa" href="sofa-detail.html">
                     <h4>CAM WOOD TV Shelves</h4>
                 </a>
@@ -252,9 +252,9 @@
                 <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
             </a>
             <div class=" lg:mt-20 mt-2   mx-auto text-center">
-                <P class="text-xs opacity-60">TV SHELF</P>
+                <P class="text-xs opacity-60">KỆ TIVI</P>
                 <a class="link_sofa" href="sofa-detail.html">
-                    <h4>Peach Wood TV Shelf</h4>
+                    <h4>Peach Wood KỆ TIVI</h4>
                 </a>
                 <strong>13,576,000 đ</strong>
             </div>
@@ -274,7 +274,7 @@
 <!-- sản phẩm bàn ghế -->
 <div class="container lg:w-11/12 w-11/12 lg:mx-auto mx-0 mt-14">
     <div>
-        <h3 class="lg:text-4xl text-2xl  lg:mb-8 ml-3">FURNITURE</h3>
+        <h3 class="lg:text-4xl text-2xl  lg:mb-8 ml-3">BÀN GHẾ</h3>
     </div>
     <div class="grid lg:grid-cols-4 grid-cols-2 lg:gap-3 gap-2 ml-5 relative">
         <div class="product_item">

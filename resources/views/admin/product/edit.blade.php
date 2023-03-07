@@ -43,9 +43,7 @@
                 <span class="input-group-text">VND</span>
             </div>
             <input type="text" class="form-control" value="{{$product->price}}" name="price">
-            <div class="input-group-append">
-                <span class="input-group-text">.00</span>
-            </div>
+            
         </div>
         <div class="input-group mb-3">
             <label for="" class="">image</label>

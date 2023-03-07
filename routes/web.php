@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -19,15 +20,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.home');
+    return view('layout.home',['title'=> "Trang chủ"]);
 });
+//view fe
+Route::get('home', [LayoutController::class, 'home'])->name('home');
+Route::get('about',[LayoutController::class, 'about'])->name('about');
+Route::get('contact',[LayoutController::class, 'contact'])->name('contact');
+Route::get('detail/{id}',[LayoutController::class,'detail'])->name('detail');
+Route::get('/product/{slug}',[LayoutController::class,'category'])->name('category');
+Route::get('news',[LayoutController::class,'news'])->name('news');
+
+
+// đăng nhập admin
 Route::get('/admin',[LoginController::class,'index'])->name('login');
 Route::post('/admin',[LoginController::class,'store'])->name('login.store');
 
  Route::middleware(['auth'])->group(function(){
  
   Route::get('/admin/home',[AdminController::class,'index'])->name('admin.home');
-  Route::resource('admin/home/category', CategoryControllerr::class);
+  Route::resource('admin/home/category', CategoryController::class);
   Route::resource('admin/home/product', ProductController::class);
   Route::resource('admin/home/blog', BlogController::class);
 });
