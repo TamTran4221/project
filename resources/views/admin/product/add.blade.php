@@ -23,6 +23,7 @@
 @endif
 
 <?php //Form thêm mớisản phẩm?>
+ @include('alert')
     <div class="card-body">
         <div class="tab-description p-0">
 

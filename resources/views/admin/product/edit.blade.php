@@ -23,6 +23,7 @@
 @endif
 
 <?php //Hiển thị form sửa sản phẩm?>
+@include('alert')
 <div class="card-body">
     <form method="POST" action="{{route('product.update',$product)}}" enctype= "multipart/form-data">
         @csrf

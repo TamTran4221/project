@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ValidateRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::search()->orderBy('created_at', 'DESC')->paginate(10);
-        return view('admin/product.index', compact('products'),['title'=>'danh sách sản phẩm']);
+        return view('admin/product.index', compact('products'),['title'=>'Danh sách sản phẩm']);
     }   
 
     /**
@@ -27,7 +28,7 @@ class ProductController extends Controller
     public function create()
     {
         $cate = Category::where('status',1)->get();
-        return view('admin/product.add',compact('cate'),['title'=> 'thêm mới sản phẩm']);
+        return view('admin/product.add',compact('cate'),['title'=> 'Thêm mới sản phẩm']);
     }
 
     /**
@@ -36,8 +37,10 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidateRequest $request)
     {
+       
+
         if($request->hasFile('file')){
             $file = $request->file;
             $fileName = $file->getClientOriginalName();
@@ -81,7 +84,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ValidateRequest $request, $id)
     {
         $product = Product::find($id);
         if($request->hasFile('file')){

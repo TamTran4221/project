@@ -25,6 +25,7 @@
 
 <?php //Hiển thị danh sách sản phẩm?>
     <!-- Left col -->
+   
     <section class="col-lg-12 connectedSortable">
         <!-- content -->
         <div class="row">
