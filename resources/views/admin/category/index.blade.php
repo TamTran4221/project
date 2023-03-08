@@ -2,6 +2,21 @@
 @section('noidung')
     <div class="container" style="margin: 50px" >
         <div>
+            <div class="search" style="display: flex;flex-direction: row-reverse;align-items: center;justify-content: space-between;">
+                <form action="">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-lg" placeholder="Nhập từ khóa tìm kiếm" name="key">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-lg btn-default">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="add">
+                    <a href="{{route('category.create')}}" class="btn btn-success" style="margin: 20px">Thêm mới</a>
+                </div>
+            </div>
             <div class="col-lg-10">
                 <table class="table" style="text-align: center">
                     <thead class="thead-dark">
@@ -33,7 +48,7 @@
                        @endforeach
                     </tbody>
                   </table>
-                  <a href="{{route('category.create')}}" class="btn btn-success" style="margin: 20px">Thêm mới</a>
+                 
                   {{ $cates->links() }}
             </div>
            

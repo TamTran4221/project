@@ -1,9 +1,10 @@
 @extends('layout')
+@section('title', 'Liên hệ')
 @section('layout')
 <div class="content">
     <div class="container lg:w-11/12 w-full lg:mx-auto mx-0 mt-14">
         <div class="flex justify-center border-b-2 border-slate-300 pb-4">
-            <h3 class="text-4xl     uppercase">CONTACT</h3>
+            <h3 class="text-4xl     uppercase">Liên Hệ</h3>
         </div>
         <div class="lg:flex ">
             <div class="content_1">
@@ -16,11 +17,11 @@
             </div>
             <div class="content_2">
                 <div class="contact">
-                    <input class="input-contact" type="text" placeholder="Name">
+                    <input class="input-contact" type="text" placeholder="Họ và tên">
                     <input class="input-contact" type="email" placeholder="Email">
-                    <input class="input-contact" type="text" placeholder="Phone number">
-                    <textarea class="input-content" value="mesenger" placeholder="Messenger"></textarea>
-                    <button class="button-contect">Send</button>
+                    <input class="input-contact" type="text" placeholder="Số điện thoại">
+                    <textarea class="input-content" value="mesenger" placeholder="Lời nhắn"></textarea>
+                    <button class="button-contect">Gửi</button>
                 </div>
             </div>
         </div>

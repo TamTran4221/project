@@ -9,12 +9,12 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::all();
-        return view('admin/blog.index', compact('blogs'), ['title'=> 'Quản lý blog']);
+        $blogs = Blog::search()->all();
+        return view('admin.blog.index', compact('blogs'), ['title'=> 'Quản lý blog']);
     }
     public function create()
     {
-        return view('/admin/blog.add',['title'=>'Thêm mới blog']);
+        return view('admin.blog.add',['title'=>'Thêm mới blog']);
     }
     public function store(Request $request)
     {
@@ -33,6 +33,6 @@ class BlogController extends Controller
     {
         $cate = Blog::find($id);
 
-        return view('/admin/blog.edit',compact('cate'),['title'=> 'Chỉnh sửa blog']);
+        return view('admin.blog.edit',compact('cate'),['title'=> 'Chỉnh sửa blog']);
     }
 }

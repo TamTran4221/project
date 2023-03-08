@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/template/layout/css/fontawesome-free-6.2.0-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
-    <title></title>
+    <title>@yield('title')</title>
 </head>
 
 <body>
@@ -95,11 +95,11 @@
                     <h2 class="text-2xl font-semibold leading-9 ml-4 uppercase">điều hướng</h2>
 
                     <ul class="mt-5 ">
-                        <li class="text-xl mt-3 footer_list-link uppercase "><a href=" ">trang chủ</a> </li>
-                        <li class="text-xl mt-3 footer_list-link uppercase "><a href=" ">giới thiệu</a> </li>
-                        <li class="text-xl mt-3 footer_list-link uppercase "><a href=" ">sản phẩm</a> </li>
-                        <li class="text-xl mt-3 footer_list-link uppercase "><a href=" ">điểm tin nổi bật</a> </li>
-                        <li class="text-xl mt-3 footer_list-link uppercase "><a href=" ">liên hệ</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href="{{route('home')}}">trang chủ</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href="{{route('about')}} ">giới thiệu</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href="{{route('home')}}">sản phẩm</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href="{{route('news')}}">điểm tin nổi bật</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href="{{route('contact')}}">liên hệ</a> </li>
                     </ul>
                 </div>
                 <div class="text-center info_footer lg:mt-0 mt-8">

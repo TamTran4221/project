@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Helper\CarHelper;
 use App\Models\Category;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
@@ -27,9 +28,12 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFour();
         view()->composer('*', function($view){
+            
             $view ->with([
                 'category' => Category::where('status',1)->get(),
+                // 'cart' => new CarHelper(),
             ]);
+
         });
     }
 }

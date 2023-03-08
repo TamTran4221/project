@@ -33,13 +33,13 @@
                         <i class="absolute right-28 top-14 fa-solid fa-magnifying-glass"></i>
                     </div>
                     <ul class="ml-6">
-                        <li class="pt-4 pb-4 border-t flex items-center"><a href="introduce.html">GIỚI THIỆU</a></li>
-                        <li class="pt-4 pb-4 border-t flex items-center"><a href="table.html">BÀN GHẾ</a></li>
-                        <li class="pt-4 pb-4 border-t flex items-center">
-                            <a href="sofa.html"></a>BÀN GHẾ SOFA</li>
-                        <li class="pt-4 pb-4 border-t flex items-center"><a href="tivi.html">KỆ TIVI</a></li>
-                        <li class="pt-4 pb-4 border-t flex items-center"><a href="news.html">TIN TỨC</a></li>
-                        <li class="pt-4 pb-4 border-t flex items-center"><a href="contact.html">LIÊN HỆ</a></li>
+                        <li class="pt-4 pb-4 border-t flex items-center"><a href="{{route('about')}}">GIỚI THIỆU</a></li>
+                        @foreach ($category as $value)
+                        <li class="pt-4 pb-4 border-t flex items-center uppercase"><a href="{{route('category',['slug'=> $value->slug])}}"">{{$value->name}}</a></li>
+                        @endforeach
+                       
+                        <li class="pt-4 pb-4 border-t flex items-center"><a href="{{route('news')}}">TIN TỨC</a></li>
+                        <li class="pt-4 pb-4 border-t flex items-center"><a href="{{route('contact')}}">LIÊN HỆ</a></li>
                         <li class="pt-4 pb-4 border-t flex items-center">ĐĂNG NHẬP</li>
                         <li class="pt-4 pb-4 border-t flex items-center">GIỎ HÀNG</li>
                         <li class="pt-4 pb-4 border-t flex items-center"></li>
@@ -51,7 +51,7 @@
                 <i class="absolute right-3 top-2.5 fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="w-52 h-14 lg:mr-32 mr-14">
-                <a href="index.html"><img src="/template/layout/img/logo/durable2.png" alt="logo-durable-BÀN GHẾ-14" class="w-full h-full"></a>
+                <a href="{{route('home')}}"><img src="/template/layout/img/logo/durable2.png" alt="logo-durable-BÀN GHẾ-14" class="w-full h-full"></a>
             </div>
             <div class="flex lg:mr-14 mr-6 ">
                 <div class="hover:text-amber-600 relative before:content-[''] before:h-5 before:border-l-2 before:absolute before:right-0 before:border-gray-400 before:translate-y-1 mr-1 lg:block hidden">
@@ -67,22 +67,19 @@
         </nav>
         <div class=" gap-10 justify-center p-5 lg:flex hidden">
             <div class="hover:text-amber-600 ">
-                <a href="introduce.html">GIỚI THIỆU</a>
+                <a href="{{route('about')}}">GIỚI THIỆU</a>
+            </div>
+            @foreach ($category as $value)
+            <div class="hover:text-amber-600 uppercase ">
+                <a href="{{route('category',['slug'=>$value->slug])}}">{{$value->name}}</a>
+            </div>
+            @endforeach
+            
+            <div class="hover:text-amber-600 ">
+                <a href="{{route('news')}}">TIN TỨC</a>
             </div>
             <div class="hover:text-amber-600 ">
-                <a href="table.html">BÀN GHẾ</a>
-            </div>
-            <div class="hover:text-amber-600 ">
-                <a href="sofa.html">SOFA</a>
-            </div>
-            <div class="hover:text-amber-600 ">
-                <a href="tivi.html">KỆ TIVI</a>
-            </div>
-            <div class="hover:text-amber-600 ">
-                <a href="news.html">TIN TỨC</a>
-            </div>
-            <div class="hover:text-amber-600 ">
-                <a href="contact.html">LIÊN HỆ</a>
+                <a href="{{route('contact')}}">LIÊN HỆ</a>
             </div>
         </div>
     </header>
@@ -230,14 +227,14 @@
         <div class="container lg:w-11/12 w-full lg:mx-auto mx-0 mt-14 ">
             <div class="lg:flex justify-between ">
                 <div class="footer_list ">
-                    <h2 class="text-2xl font-semibold leading-9 ml-4 ">DIRECTIONAL</h2>
+                    <h2 class="text-2xl font-semibold leading-9 ml-4 uppercase">điều hướng</h2>
 
                     <ul class="mt-5 ">
-                        <li class="text-xl mt-3 footer_list-link "><a href=" ">HOME PAGE</a> </li>
-                        <li class="text-xl mt-3 footer_list-link "><a href=" ">ABOUT</a> </li>
-                        <li class="text-xl mt-3 footer_list-link "><a href=" ">PRODUCT</a> </li>
-                        <li class="text-xl mt-3 footer_list-link "><a href=" ">USEFUL NEWS POINTS ONLY</a> </li>
-                        <li class="text-xl mt-3 footer_list-link "><a href=" ">CONTACT</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href=" {{route('home')}}">trang chủ</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href="{{route('about')}} ">giới thiệu</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href=" ">sản phẩm</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href="{{route('news')}}">điểm tin hữu ích</a> </li>
+                        <li class="text-xl mt-3 footer_list-link uppercase "><a href="{{route('contact')}}">liên hệ</a> </li>
                     </ul>
                 </div>
                 <div class="text-center info_footer lg:mt-0 mt-8">
@@ -248,14 +245,14 @@
                     <div class="mt-6 ">
                         <input class="input_info " type="email " placeholder="Email ... ">
                         <div class="button_footer flex justify-center items-center ">
-                            <button>SIGN UP</button>
+                            <button>đăng kí</button>
                         </div>
                     </div>
 
 
                 </div>
                 <div class="footer_list-info ">
-                    <h2 class="text-2xl font-semibold leading-9 ml-4 ">CONTACT</h2>
+                    <h2 class="text-2xl font-semibold leading-9 ml-4 ">liên hệ</h2>
                     <div class="flex mt-5">
                         <span class="text-yellow-400 mr-1">A</span>
                         <h3>:319 c16 Ly Thuong Kiet, ward 15, District 11, Tp.HCM</h3>
@@ -267,8 +264,8 @@
                     <div class="flex mt-5">
                         <span class="text-yellow-400 mr-1">E</span>
                         <div>
-                            <h3>: candinh355@gmail.com</h3>
-                            <h3> tamanhtran473@gmail.com</h3>
+                            <h3>: mona@gmail.com</h3>
+                            
                         </div>
 
                     </div>
@@ -281,24 +278,24 @@
         <div class="modal_container js-modal_container">
             <div class="modal_close js_modal-close"><i class="fa-solid fa-xmark"></i></div>
             <div class="modal_content">
-                <header class="modal_header">
-                    LOGIN
+                <header class="modal_header uppercase">
+                    đăng nhập
                 </header>
                 <form action="" method="get">
                     <div class="modal_body">
 
-                        <label for="" class="modal_label">Account or email address *</label>
+                        <label for="" class="modal_label">Tài khoản hoặc địa chỉ email *</label>
                         <input required class="modal_input" type="email" placeholder="Email ...">
-                        <label for="" class="modal_label">Password *</label>
+                        <label for="" class="modal_label">Mật khẩu *</label>
                         <input required class="modal_input" type="password" placeholder="password">
-                        <button id="login">Login</button>
+                        <button id="login">Đăng nhập</button>
                         <input type="checkbox" class="modal_check">
-                        <label for="">Remember me</label>
+                        <label for="">Nhớ mật khẩu</label>
 
                     </div>
                     <footer class="flex justify-between">
-                        <a class="modal_footer" href="">Forgot your password?</a>
-                        <p class="modal_signup" href="">Don't have an account ?</p>
+                        <a class="modal_footer" href="">Quên mật khẩu?</a>
+                        <p class="modal_signup" href="">Chưa có tài khoản ?</p>
                     </footer>
                 </form>
 
@@ -313,18 +310,18 @@
             <div class="modal_close-signup js_modal-close-signup"><i class="fa-solid fa-xmark"></i></div>
             <div class="modal_content-signup">
                 <header class="modal_header-signup">
-                    SIGNUP
+                    ĐĂNG KÝ
                 </header>
                 <form action="" method="get">
                     <div class="modal_body-signup">
 
-                        <label for="" class="modal_label-signup">Account name or email address *</label>
+                        <label for="" class="modal_label-signup">Tài khoản và địa chỉ email *</label>
                         <input required class="modal_input-signup" type="email" placeholder="Email ...">
-                        <label for="" class="modal_label-signup">Password *</label>
+                        <label for="" class="modal_label-signup">Mật khẩu *</label>
                         <input required class="modal_input-signup" type="password" placeholder="Password">
-                        <label for="" class="modal_label-signup">Confirm password *</label>
+                        <label for="" class="modal_label-signup">Nhập lại mật khẩu *</label>
                         <input required class="modal_input-signup" type="password" placeholder="confirm password">
-                        <button id="signup">Signup</button>
+                        <button id="signup">Đăng ký</button>
 
                     </div>
                 </form>

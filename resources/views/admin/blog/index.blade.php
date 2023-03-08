@@ -29,8 +29,22 @@
         <!-- content -->
         <div class="row">
             <div class="col-12">
-                    <div class="card-body">
-                        <a href="{{route('blog.create')}}" class="btn btn-success" style="margin: 20px">Thêm mới blog</a>
+                    <div class="card-body" >
+                        <div class="search" style="display: flex;flex-direction: row-reverse;align-items: center;justify-content: space-between;">
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="search" class="form-control form-control-lg" placeholder="Nhập từ khóa tìm kiếm" name="key">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-lg btn-default">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="add">
+                                <a href="{{route('blog.create')}}" class="btn btn-success" style="margin: 20px">Thêm mới blog</a>
+                            </div>
+                        </div>
                         <table id="example2" class="table table-bordered table-hover w-full">
                             <thead>
                                 <tr>

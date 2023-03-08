@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Danh mục')
 @section('layout')
 <div class="container lg:w-11/12 w-full lg:mx-auto mx-0 mt-14">
     <!-- content header -->
@@ -6,6 +7,7 @@
         <div class="lg:flex hidden gap-4">
             <div class="text-2xl home uppercase"><a href="">trang chủ</a></div>
             <div class="text-2xl">/</div>
+            
             <div class="text-2xl uppercase">
                 
             </div>
@@ -68,7 +70,7 @@
                     </a>
                     <div class=" lg:mt-20 mt-2   mx-auto text-center">
                         <P class="text-xs opacity-60">{{$value->category->name}}</P>
-                        <a class="link_sofa" href="">
+                        <a class="link_sofa" href="{{route('detail',['id'=>$value->id])}}">
                             <h4>{{$value->name}}</h4>
                         </a>
                         <strong>{{number_format($value->price)}}đ</strong>

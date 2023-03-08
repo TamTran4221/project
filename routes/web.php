@@ -42,3 +42,4 @@ Route::post('/admin',[LoginController::class,'store'])->name('login.store');
   Route::resource('admin/home/product', ProductController::class);
   Route::resource('admin/home/blog', BlogController::class);
 });
+//CART

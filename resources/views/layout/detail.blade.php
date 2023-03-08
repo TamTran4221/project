@@ -62,7 +62,7 @@
                             <h1 class="product-title entry-title text-2xl">{{$pro->name}}</h1>
                         </div>
                         <div class="price" style="font-weight: bold;">
-                            <span>{{$pro->price}}&nbsp;<span>đ</span></span>
+                            <span>{{number_format($pro->price)}}&nbsp;<span>đ</span></span>
                         </div>
                         <div class="product-short-description">
                             <ul class="list-none hover:list-disc">
@@ -76,7 +76,7 @@
                                 <input type="text" name="quantity" value="1" class="qty">
                                 <div class="qtyplus">+</div>
                             </form>
-                            <a href="#" class="round-black-btn">Thêm vào giỏ hàng</a>
+                            <a href="" class="round-black-btn">Thêm vào giỏ hàng</a>
                         </div>
                     </div>
                 </div>

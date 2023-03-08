@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Giới thiệu')
 @section('layout')
 <div class="text-center text-4xl mt-6">MONA MEDIA</div>
 <div class="container lg:w-11/12 w-full lg:mx-auto mx-0 mt-14">

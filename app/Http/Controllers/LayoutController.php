@@ -10,16 +10,19 @@ class LayoutController extends Controller
 {
     public function home()
     {
-        $product = Product::all();
-        return view('layout.home',compact('product'),['title'=> "Trang chủ"]);
+
+       $product = Product::where('category_id',2)->limit(8)->get();
+       $products = Product::where('category_id',3)->get();
+       $pro = Product::where('category_id',1)->limit(8)->get();
+        return view('layout.home',compact('product','products','pro'));
     }
     public function about()
     {
-        return view('layout.about',['title'=> "Giới thiệu"]);
+        return view('layout.about');
     }
     public function contact()
     {
-        return view('layout.contact',['title'=> "Liên hệ"]);
+        return view('layout.contact');
     }
     public function news()
     {
@@ -28,14 +31,14 @@ class LayoutController extends Controller
     public function detail($id)
     {
         $pro = Product::find($id);
-        return view('layout.detail',compact('pro'),['title'=> "Trang chi tiết"]);
+        return view('layout.detail',compact('pro'));
     }
     public function category($slug)
     {
         $category = Category::where('slug',$slug)->first();
         $product = Product::where('category_id',$category->id)->get();
-        $products = Product::where('category_id',1)->limit(4)->get();
-        return view('layout.category', compact('product','products'),['title'=>"product"]);
+        $products = Product::where('category_id',2)->limit(4)->get();
+        return view('layout.category', compact('product','products'));
     }
 
 }

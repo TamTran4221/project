@@ -15,5 +15,15 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+     public function scopeSearch($query)
+     {
+        if ($key = request()->key) {
+            $query =$query ->where('name','like','%'.$key.'%');
+        }
+        return $query;
+     }
+     public function order() {
+        return $this->hasMany(Orders::class);
+    }
 
 }

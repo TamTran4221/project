@@ -14,8 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $cates = Category::orderBy('created_at', 'DESC')->paginate(5);
-        return view('/admin/category.index',compact('cates'),['title'=>'Danh sách danh mục']);
+        $cates = Category::search()->orderBy('created_at', 'DESC')->paginate(5);
+        return view('admin.category.index',compact('cates'),['title'=>'Danh sách danh mục']);
     }
 
     /**
@@ -25,7 +25,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('/admin/category.add',['title'=>'Thêm mới danh mục']);
+        return view('admin.category.add',['title'=>'Thêm mới danh mục']);
     }
 
     /**
@@ -62,7 +62,7 @@ class CategoryController extends Controller
     {
         $cate = Category::find($id);
 
-        return view('/admin/category.edit',compact('cate'),['title'=> 'Chỉnh sửa danh mục']);
+        return view('admin.category.edit',compact('cate'),['title'=> 'Chỉnh sửa danh mục']);
     }
 
     /**
