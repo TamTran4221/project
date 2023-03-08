@@ -31,7 +31,9 @@ class LayoutController extends Controller
     public function detail($id)
     {
         $pro = Product::find($id);
-        return view('layout.detail',compact('pro'));
+        $product = Product::where('category_id',$pro->category_id)->limit('4')->get();
+        
+        return view('layout.detail',compact('pro','product'));
     }
     public function category($slug)
     {

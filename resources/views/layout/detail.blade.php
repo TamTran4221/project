@@ -89,66 +89,24 @@
         </div>
         <div class="grid lg:grid-cols-4 grid-cols-2 lg:gap-3 gap-2 lg:ml-5 ml-1 relative">
 
-            <div class="product_item">
-                <a href="">
-                    <div class="product_sofa "></div>
+           
+           @foreach ($product as $value)
+           <div class="product_item">
+            <a href="">
+                <div> <img src="{{url('uploads')}}/{{$value->image}}" alt=""></div>
+            </a>
+            <a class="product_link" href="">
+                <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
+            </a>
+            <div class="w-36 lg:mt-20 mt-2   mx-auto text-center">
+                <P class="text-xs opacity-60">{{$value->category->name}}</P>
+                <a class="link_sofa" href="">
+                    <h4>{{$value->name}}</h4>
                 </a>
-                <a class="product_link" href="">
-                    <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
-                </a>
-                <div class="w-36 lg:mt-20 mt-2   mx-auto text-center">
-                    <P class="text-xs opacity-60">SOFA</P>
-                    <a class="link_sofa" href="">
-                        <h4>Sofa SF108</h4>
-                    </a>
-                    <strong>13,576,000 đ</strong>
-                </div>
+                <strong>{{number_format($value->price)}}đ</strong>
             </div>
-            <div class="product_item">
-                <a href="">
-                    <div class="product_sofa "></div>
-                </a>
-                <a class="product_link" href="">
-                    <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
-                </a>
-                <div class="w-36 lg:mt-20 mt-2   mx-auto text-center">
-                    <P class="text-xs opacity-60">SOFA</P>
-                    <a class="link_sofa" href="">
-                        <h4>SF22</h4>
-                    </a>
-                    <strong>13,576,000 đ</strong>
-                </div>
-            </div>
-            <div class="product_item">
-                <a href="">
-                    <div class="product_sofa "></div>
-                </a>
-                <a class="product_link" href="">
-                    <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
-                </a>
-                <div class="w-36 lg:mt-20 mt-2   mx-auto text-center">
-                    <P class="text-xs opacity-60">SOFA</P>
-                    <a class="link_sofa" href="">
-                        <h4>Sofa SF33</h4>
-                    </a>
-                    <strong>13,576,000 đ</strong>
-                </div>
-            </div>
-            <div class="product_item">
-                <a href="">
-                    <div class="product_sofa "></div>
-                </a>
-                <a class="product_link" href="">
-                    <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
-                </a>
-                <div class="w-36 lg:mt-20 mt-2   mx-auto text-center">
-                    <P class="text-xs opacity-60">SOFA</P>
-                    <a class="link_sofa" href="">
-                        <h4>Sofa SF32</h4>
-                    </a>
-                    <strong>13,576,000 đ</strong>
-                </div>
-            </div>
+        </div>
+           @endforeach
         </div>
     </section>
 </div>
