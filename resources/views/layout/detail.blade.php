@@ -76,7 +76,7 @@
                                 <input type="text" name="quantity" value="1" class="qty">
                                 <div class="qtyplus">+</div>
                             </form>
-                            <a href="" class="round-black-btn">Thêm vào giỏ hàng</a>
+                            <a href="{{route('cart.add',$pro->id)}}" class="round-black-btn">Thêm vào giỏ hàng</a>
                         </div>
                     </div>
                 </div>

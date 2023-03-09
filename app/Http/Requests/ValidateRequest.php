@@ -26,7 +26,7 @@ class ValidateRequest extends FormRequest
         return [
             'name' => 'required',
             'price' => 'required|numeric',
-            'upload' => 'required|mimes:jpg,jpeg,png,gif',
+            
         ];
     }
     public function messages()
@@ -35,7 +35,6 @@ class ValidateRequest extends FormRequest
             'name.required'=>'Tên sản phẩm không rỗng',
             'name.unique'=>$this->name.' đã tồn tại',
             'price.required'=> 'Giá sản phẩm không rỗng',
-            'upload.required'=> 'file uploads phải đúng định dạng'
         ];
     }
 }

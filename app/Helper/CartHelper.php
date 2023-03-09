@@ -11,17 +11,18 @@ class Cart
     }
     public function add($product, $quantity)
     {
-        $item = [
-            'product_id' => $product->id,
-            'product_name'=>$product->name,
-            'product_image'=> $product->image,
-            'product_quantity'=>$quantity > 0 ? $quantity:1
+        $cart_item = (object) [
+            'id' => $product->id,
+            'name' => $product->name,
+            'image' => $product->image,
+            'price' => $product->sale_price ? $product->sale_price : $product->price,
+            'quantity' => 1
         ];
         if(isset($this->items[$product->id])){
             $this->items[$product->id];
 
         }else{
-            $this->items[$product->id] = $item;
+            $this->items[$product->id] = $cart_item;
         }
         session(['cart'=>$this->items]);
     }

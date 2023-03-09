@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\LoginController;
@@ -43,3 +44,9 @@ Route::post('/admin',[LoginController::class,'store'])->name('login.store');
   Route::resource('admin/home/blog', BlogController::class);
 });
 //CART
+Route::group(['prefix' => 'cart'], function() {
+
+  Route::get('', [CartController::class, 'view'])->name('cart.view');
+  Route::get('add/{product}', [CartController::class, 'add'])->name('cart.add');
+  
+});

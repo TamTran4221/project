@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/template/layout/css/detail.css">
     <link rel="stylesheet" href="/template/layout/css/sofa_table_tivi.css">
     <link rel="stylesheet" href="/template/layout/css/fontawesome-free-6.2.0-web/css/all.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
     <title>@yield('title')</title>
@@ -63,7 +64,7 @@
 
                 </div>
                 <div class="hover:text-amber-600 flex gap-1 product">
-                    <a class="hover:text-amber-600 text-lg lg:mr-1 text-zinc-500 lg:block hidden" href="">GIỎ HÀNG</a>
+                    <a class="hover:text-amber-600 text-lg lg:mr-1 text-zinc-500 lg:block hidden" href="{{route('cart.view')}}">GIỎ HÀNG</a>
                     <i class="fa-solid fa-cart-plus lg:text-2xl text-2xl"></i>
                     <div class="product_box">Không có sản phẩm nào trong giỏ hàng</div>
                 </div>
@@ -110,7 +111,7 @@
                     <div class="mt-6 ">
                         <input class="input_info " type="email " placeholder="Email ... ">
                         <div class="button_footer flex justify-center items-center ">
-                            <button>SIGN UP</button>
+                            <button>Đăng Ký</button>
                         </div>
                     </div>
 
@@ -119,7 +120,7 @@
                     <h2 class="text-2xl font-semibold leading-9 ml-4 uppercase">liên hệ</h2>
                     <div class="flex mt-5">
                         <span class="text-yellow-400 mr-1">A</span>
-                        <h3>:319 c16 Ly Thuong Kiet, ward 15, District 11, Tp.HCM</h3>
+                        <h3> 319 c16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</h3>
                     </div>
                     <div class="flex mt-5">
                         <span class="text-yellow-400 mr-1">T</span>
@@ -128,7 +129,7 @@
                     <div class="flex mt-5">
                         <span class="text-yellow-400 mr-1">E</span>
                         <div>
-                            <h3>: monasofa@gmail.com</h3>
+                            <h3>: mon@mona.media</h3>
                             
                         </div>
 

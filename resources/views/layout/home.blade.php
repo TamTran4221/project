@@ -110,7 +110,7 @@
             <a href="{{route('detail',['id'=> $value->id])}}">
                 <div> <img src="{{url('uploads')}}/{{$value->image}}" alt=""></div>
             </a>
-            <a class="product_link" href="">
+            <a class="product_link" href="{{route('cart.add',$value->id)}}">
                 <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
             </a>
             <div class=" lg:mt-20 mt-2   mx-auto text-center">
