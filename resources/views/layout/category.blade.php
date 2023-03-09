@@ -1,86 +1,183 @@
 @extends('layout')
 @section('title', 'Danh mục')
 @section('layout')
-<div class="container lg:w-11/12 w-full lg:mx-auto mx-0 mt-14">
-    <!-- content header -->
-    <div class="flex justify-between">
-        <div class="lg:flex hidden gap-4">
-            <div class="text-2xl home uppercase"><a href="">trang chủ</a></div>
-            <div class="text-2xl">/</div>
-            
-            <div class="text-2xl uppercase">
-                
-            </div>
-        </div>
-        <div class="lg:mx-0 mx-auto">
-            <label class="text-lg lg:inline hidden" for="">Xem tất cả 9 kết quả</label>
-            <select class="select">
-                <option value="">Thứ tự mặc định</option>
-                <option value="">Theo thứ tự phổ biến</option>
-                <option value="">Theo đánh giá</option>
-                <option value="">Theo sản phẩm mới</option>
-                <option value="">Theo giá sản phẩm: từ cao đến thấp</option>
-                <option value="">Theo giá sản phẩm: từ thấp đến cao</option>
-            </select>
-        </div>
-    </div>
 
-    <!-- content body -->
-    <div class="flex mt-8 gap-2">
-        <div class="category lg:block hidden w-3/12">
-            <div class="flex">
-                <input class="input-category" type="text" placeholder="Search ...">
-                <span class="input-category_icon">
-                    <i class=" fa-solid fa-magnifying-glass"></i>
-                </span>
-            </div>
-            <div>
-                <h3 class="mb-5 mt-5 text-2xl uppercase ">Danh mục sản phẩm</h3>
-                <ul>
-                    @foreach ($category as $value)
-                    <li class="pt-4 pb-4 border-t flex items-center uppercase"><a href="{{route('category',['slug'=> $value->slug])}}">{{$value->name}}</a></li>
-                    @endforeach
-                </ul>
-            </div>
-            <div>
-                <h3 class="mb-5 mt-5 text-2xl uppercase ">sản phẩm</h3>
-                <ul>
-                    @foreach ($products as $value)
-                    <li class="flex gap-4 items-center mb-3">
-                        <a href=""><img class="w-16 h-16" src="{{url('uploads')}}/{{$value->image}}" alt=""></a>
-                        <div>
-                            <h4 class="text-xl product-title"><a href="">{{$value->name}}</a></h4>
-                            <strong>{{number_format($value->price)}}đ</strong>
+    <main id="main" class="">
+        <div class="row category-page-row">
+
+            <div class="col large-3 hide-for-medium ">
+                <div id="shop-sidebar" class="sidebar-inner col-inner">
+                    <aside id="woocommerce_product_search-2" class="widget woocommerce widget_product_search">
+                        <form role="search" method="get" class="searchform"
+                            action="">
+                            <div class="flex-row relative">
+                                <div class="flex-col flex-grow">
+                                    <input type="search" class="search-field mb-0" name="s" value=""
+                                        placeholder="Tìm kiếm&hellip;" />
+                                    <input type="hidden" name="post_type" value="product" />
+                                </div><!-- .flex-col -->
+                                <div class="flex-col">
+                                    <button type="submit"
+                                        class="ux-search-submit submit-button secondary button icon mb-0">
+                                        <i class="icon-search"></i> </button>
+                                </div><!-- .flex-col -->
+                            </div><!-- .flex-row -->
+                            <div class="live-search-results text-left z-top"></div>
+                        </form>
+                    </aside>
+                    <aside id="nav_menu-2" class="widget widget_nav_menu"><span class="widget-title shop-sidebar">Danh mục sản phẩm</span>
+                        <div class="is-divider small"></div>
+                        <div class="menu-danh-muc-san-pham-vertical-menu-container">
+                            <ul id="menu-danh-muc-san-pham-vertical-menu" class="menu">
+                               
+                                @foreach ($category as $value)
+                                <li id="menu-item-488"class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-488">
+                                    <a href="{{route('category',['slug'=> $value->slug])}}" class="menu-image-title-after">
+                                        <span class="menu-image-title">{{$value->name}}</span>
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
                         </div>
-                    </li>
-                    @endforeach
-                    
-                </ul>
-            </div>
-        </div>
-        <div class="product-sofa-table-tivi">
-            <div class="grid lg:grid-cols-3 grid-cols-2 gap-2">
-                @foreach ($product as $value)
-                <div class="product_item">
-                    <a href="{{route('detail',['id'=>$value->id])}}">
-                        <div> <img src="{{url('uploads')}}/{{$value->image}}" alt=""></div>
-                    </a>
-                    <a class="product_link" href="">
-                        <i class="absolute -bottom-20 left-8 fa-solid fa-cart-plus lg:text-2xl lg:block hidden"></i>
-                    </a>
-                    <div class=" lg:mt-20 mt-2   mx-auto text-center">
-                        <P class="text-xs opacity-60">{{$value->category->name}}</P>
-                        <a class="link_sofa" href="{{route('detail',['id'=>$value->id])}}">
-                            <h4>{{$value->name}}</h4>
-                        </a>
-                        <strong>{{number_format($value->price)}}đ</strong>
-                    </div>
-                </div>
-                @endforeach
-                
+                    </aside>
+                    <aside id="woocommerce_products-3" class="widget woocommerce widget_products"><span
+                            class="widget-title shop-sidebar">Sản phẩm</span>
+                        <div class="is-divider small"></div>
+                        <ul class="product_list_widget">
+                            <li>
 
+                                <a href="../san-pham/ke-tivi-go-dinh-huong/index.html">
+                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/4-3-300x300.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt=""
+                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-100x100.jpg 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Kệ Tivi Gỗ
+                                        Đinh Hương</span>
+                                </a>
+
+
+                                <span class="woocommerce-Price-amount amount">8,952,300&nbsp;<span
+                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
+                            </li>
+                            <li>
+
+                                <a href="../san-pham/bo-ban-ghe-an-go-soi-6-ghe-vat-goc-boc/index.html">
+                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/05-300x300.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt=""
+                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-100x100.jpg 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Bộ bàn ghế ăn
+                                        gỗ Sồi 6 ghế vát góc bọc</span>
+                                </a>
+
+
+                                <span class="woocommerce-Price-amount amount">7,459,000&nbsp;<span
+                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
+                            </li>
+                            <li>
+
+                                <a href="../san-pham/bo-ban-ghe-an-go-cao-su/index.html">
+                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/09-300x300.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt=""
+                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-100x100.jpg 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Bộ bàn ghế ăn
+                                        gỗ Cao Su</span>
+                                </a>
+
+
+                                <span class="woocommerce-Price-amount amount">5,471,000&nbsp;<span
+                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
+                            </li>
+                            <li>
+
+                                <a href="../san-pham/sofa-go-huong-tay-10-cham-dao-slh087-2/index.html">
+                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/3-2-300x300.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt=""
+                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-2-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-2-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-2-100x100.jpg 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Sofa gỗ Hương
+                                        tay 10 chạm đào - SLH087</span>
+                                </a>
+
+
+                                <span class="woocommerce-Price-amount amount">18,963,000&nbsp;<span
+                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
+                            </li>
+                            <li>
+
+                                <a href="../san-pham/bo-ban-ghe-an-go-soi-6-ghe-mau-2-tang-1m6-bas215/index.html">
+                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/04-300x300.jpg"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt=""
+                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-100x100.jpg 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Bộ bàn ghế
+                                        ăn gỗ Sồi 6 ghế mẫu 2 tầng 1m6 - BAS215</span>
+                                </a>
+
+
+                                <span class="woocommerce-Price-amount amount">7,568,000&nbsp;<span
+                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
+                            </li>
+                        </ul>
+                    </aside>
+                </div><!-- .sidebar-inner -->
+            </div><!-- #shop-sidebar -->
+
+            <div class="col large-9">
+                <div class="shop-container">
+                   
+                   
+                    <div class="products row row-small large-columns-3 medium-columns-3 small-columns-2">
+                        @foreach ($product as $value)
+                        <div class="product-small col has-hover post-431 product type-product status-publish has-post-thumbnail product_cat-ban-an first instock shipping-taxable purchasable product-type-simple">
+                            <div class="col-inner">
+                                <div class="badge-container absolute left top z-1"></div>
+                                <div class="product-small box ">
+                                    <div class="box-image">
+                                        <div class="image-zoom">
+                                            <a href="{{route('detail',['id'=>$value->id])}}">
+                                                <img width="300" height="300" src="{{url('uploads')}}/{{$value->image}}"
+                                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                                    alt="" />
+                                            </a>
+                                            <div class="image-tools is-small top right show-on-hover"></div>
+                                            <div class="image-tools is-small hide-for-small bottom left show-on-hover">
+                                            </div>
+                                            <div
+                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                                                <a rel="nofollow" href="index086a.html?add-to-cart=431" data-quantity="1"
+                                                    data-product_id="431" data-product_sku=""
+                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
+                                                    style="width:0">
+                                                    <div class="cart-icon tooltip absolute is-small" title="Thêm vào giỏ">
+                                                        <strong>+</strong>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div><!-- box-image -->
+
+                                        <div class="box-text box-text-products text-center grid-style-2">
+                                            <div class="title-wrapper">
+                                                <p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$value->category->name}}</p>
+                                                <p class="name product-title"><a href="{{route('detail',['id'=>$value->id])}}">{{$value->name}}</a></p>
+                                            </div>
+                                            <div class="price-wrapper">
+                                                <span class="price">
+                                                    <span class="woocommerce-Price-amount amount">{{number_format($value->price)}}<span
+                                                            class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                    </span></span>
+                                            </div>
+                                        </div><!-- box-text -->
+                                    </div><!-- box -->
+                                </div><!-- .col-inner -->
+                            </div><!-- col -->
+                        </div><!-- row -->
+                        @endforeach
+                    </div><!-- shop container -->
+                    
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+
+    </main><!-- #main -->
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Helper\CarHelper;
+use App\Helper\Cart;
 use App\Models\Product;
 
 class CartController extends Controller
@@ -15,43 +16,31 @@ class CartController extends Controller
         return view ('layout.cart-view', compact('carts'));
     }
 
-    public function add(Product $product)
+    public function add(Cart $cart, Product $product)
     {
-        $carts = session('cart') ? session('cart') : [];
-
-        if (isset($carts[$product->id])) {
-            $carts[$product->id]->quantity += 1;
-        } else {
-            $cart_item = (object) [
-                'id' => $product->id,
-                'name' => $product->name,
-                'image' => $product->image,
-                'price' => $product->sale_price ? $product->sale_price : $product->price,
-                'quantity' => 1
-            ];
-
-            $carts[$product->id] = $cart_item;
-        }
-
-
-        session(['cart' => $carts]);
-        // dd($product);
+         $cart->addToCart($product);
 
        return redirect()->route('cart.view');
     }
 
-    public function remove($id)
+    public function remove(Cart $cart,$id)
     {
-        # code...
+        $cart->removeItem($id);
+        return redirect()->route('cart.view');
     }
 
-    public function update($id)
+    public function update(Cart $cart,$id)
     {
-        # code...
+        $quantity = request('quantity', 1);
+        $cart->updateItem($id, $quantity);
+        return redirect()->route('cart.view');
+ 
+        return redirect()->route('cart.view');
     }
 
     public function clear()
     {
-        # code...
+        session(['cart' => null]);
+        return redirect()->route('cart.view');
     }
 }
