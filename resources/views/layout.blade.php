@@ -773,41 +773,31 @@
                         <!-- Right Elements -->
                         <div class="flex-col hide-for-medium flex-right">
                             <ul class="header-nav header-nav-main nav nav-right  nav-divided nav-uppercase">
-                                <li class="account-item has-icon
-    ">
-
+                                <li class="account-item has-icon ">
                                     <a href="" class="nav-top-link nav-top-not-logged-in "
                                         data-open="#login-form-popup">
                                         <span>
                                             Đăng nhập </span>
 
                                     </a><!-- .account-login-link -->
-
-
-
                                 </li>
                                 <li class="cart-item has-icon has-dropdown">
 
-                                    <a href="gio-hang/index.html" title="Giỏ hàng" class="header-cart-link is-small">
+                                    <a href="{{route('cart.view')}}" title="Giỏ hàng" class="header-cart-link is-small">
 
 
                                         <span class="header-cart-title">
                                             Giỏ hàng </span>
 
                                         <span class="cart-icon image-icon">
-                                            <strong>0</strong>
+                                            <strong> {{$cart->totalQuantity}} </strong>
                                         </span>
                                     </a>
 
                                     <ul class="nav-dropdown nav-dropdown-simple">
                                         <li class="html widget_shopping_cart">
                                             <div class="widget_shopping_cart_content">
-
-
-                                                <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong
-                                                    giỏ hàng.</p>
-
-
+                                                <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
                                             </div>
                                         </li>
                                     </ul><!-- .nav-dropdown -->
@@ -1095,147 +1085,16 @@
 
 
 
-            <div class="absolute-footer light medium-text-center text-center">
-                <div class="container clearfix">
-
-
-                    <div class="footer-primary pull-left">
-                        <div class="copyright-footer">
-                            &copy; All rights reserved.
-                            Thiết kế website <img src="../../mona.solutions/logo.png"
-                                style="width:20px;vertical-align:sub;" alt="MonaMedia"> <a
-                                href="https://mona.media/" title="Mona Media"><strong>Mona Media</strong></a>
-                        </div>
-                    </div><!-- .left -->
-                </div><!-- .container -->
-            </div><!-- .absolute-footer -->
-            <a href="#top"
-                class="back-to-top button invert plain is-outline hide-for-medium icon circle fixed bottom z-1"
-                id="top-link"><i class="icon-angle-up"></i></a>
+           
 
         </footer><!-- .footer-wrapper -->
 
     </div><!-- #wrapper -->
+    
 
-    <!-- Mobile Sidebar -->
-    <div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
-        <div class="sidebar-menu no-scrollbar ">
-            <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
-                <li class="header-search-form search-form html relative has-icon">
-                    <div class="header-search-form-wrapper">
-                        <div class="searchform-wrapper ux-search-box relative form-flat is-normal">
-                            <form role="search" method="get" class="searchform"
-                                action="">
-                                <div class="flex-row relative">
-                                    <div class="flex-col flex-grow">
-                                        <input type="search" class="search-field mb-0" name="s"
-                                            value="" placeholder="Tìm kiếm&hellip;" />
-                                        <input type="hidden" name="post_type" value="product" />
-                                    </div><!-- .flex-col -->
-                                    <div class="flex-col">
-                                        <button type="submit"
-                                            class="ux-search-submit submit-button secondary button icon mb-0">
-                                            <i class="icon-search"></i> </button>
-                                    </div><!-- .flex-col -->
-                                </div><!-- .flex-row -->
-                                <div class="live-search-results text-left z-top"></div>
-                            </form>
-                        </div>
-                    </div>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a
-                        href="gioi-thieu/index.html" class="menu-image-title-after"><span
-                            class="menu-image-title">Giới thiệu</span></a></li>
-                <li
-                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-367">
-                    <a href="danh-muc/ban-ghe/index.html" class="menu-image-title-after"><span
-                            class="menu-image-title">BÀN GHẾ</span></a>
-                    <ul class=children>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-403"><a
-                                href="danh-muc/ban-ghe/ban-an/index.html" class="menu-image-title-after"><span
-                                    class="menu-image-title">Bàn ăn</span></a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-404"><a
-                                href="danh-muc/ban-ghe/ban-phong-khach/index.html"
-                                class="menu-image-title-after"><span class="menu-image-title">Bàn phòng
-                                    khách</span></a></li>
-                    </ul>
-                </li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-368"><a
-                        href="danh-muc/ban-ghe-sofa/index.html" class="menu-image-title-after"><span
-                            class="menu-image-title">BÀN GHẾ SOFA</span></a></li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-422"><a
-                        href="danh-muc/ke-tivi/index.html" class="menu-image-title-after"><span
-                            class="menu-image-title">KỆ TIVI</span></a></li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25"><a
-                        href="category/tin-tuc/index.html" class="menu-image-title-after"><span
-                            class="menu-image-title">Tin tức</span></a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a
-                        href="lien-he/index.html" class="menu-image-title-after"><span
-                            class="menu-image-title">Liên hệ</span></a></li>
-                <li class="account-item has-icon menu-item">
-                    <a href="tai-khoan/index.html" class="nav-top-link nav-top-not-logged-in">
-                        <span class="header-account-title">
-                            Đăng nhập </span>
-                    </a><!-- .account-login-link -->
+    
 
-                </li>
-                <li class="cart-item has-icon has-dropdown">
-
-                    <a href="gio-hang/index.html" title="Giỏ hàng" class="header-cart-link is-small">
-
-
-                        <span class="header-cart-title">
-                            Giỏ hàng </span>
-
-                        <span class="cart-icon image-icon">
-                            <strong>0</strong>
-                        </span>
-                    </a>
-
-                    <ul class="nav-dropdown nav-dropdown-simple">
-                        <li class="html widget_shopping_cart">
-                            <div class="widget_shopping_cart_content">
-
-
-                                <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
-
-
-                            </div>
-                        </li>
-                    </ul><!-- .nav-dropdown -->
-
-                </li>
-                <li class="html header-social-icons ml-0">
-                    <div class="social-icons follow-icons "><a href="http://url/" target="_blank"
-                            data-label="Facebook" rel="nofollow" class="icon plain facebook tooltip"
-                            title="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url/"
-                            target="_blank" rel="nofollow" data-label="Instagram"
-                            class="icon plain  instagram tooltip" title="Follow on Instagram"><i
-                                class="icon-instagram"></i></a><a href="http://url/" target="_blank"
-                            data-label="Twitter" rel="nofollow" class="icon plain  twitter tooltip"
-                            title="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:your@email"
-                            data-label="E-mail" rel="nofollow" class="icon plain  email tooltip"
-                            title="Send us an email"><i class="icon-envelop"></i></a></div>
-                </li>
-            </ul>
-        </div><!-- inner -->
-    </div><!-- #mobile-menu -->
-    <!-- FB Messenger -->
-    <div id="fbMsg">
-        <img data-remodal-target="fb-messenger" src="{{url('template/layout')}}/wp-content/plugins/fb-messenger/images/fb-messenger.png">
-    </div>
-
-    <div class="remodal" data-remodal-id="fb-messenger">
-        <div class="fb-page" data-tabs="messages" data-href="" data-width="310" data-height="330"
-            data-href="" data-small-header="true" data-hide-cover="false" data-show-facepile="true"
-            data-adapt-container-width="true">
-            <div class="fb-xfbml-parse-ignore">
-                <blockquote>Loading...</blockquote>
-            </div>
-        </div>
-    </div>
-
-    <div id="fb-root"></div>
+    
     <script>
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];

@@ -29,11 +29,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFour();
         view()->composer('*', function($view){
-            $cart = new Cart();
+           
             $view ->with([
                 'category' => Category::where('status',1)->get(),
-            
-            ],compact('cart'));
+                'cart' => new Cart,
+            ]);
 
         });
     }

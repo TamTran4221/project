@@ -54,7 +54,7 @@
                                         <nav class="woocommerce-breadcrumb breadcrumbs"><a
                                                 href="{{route('home')}}">Trang chủ</a> <span
                                                 class="divider">&#47;</span> <a
-                                                href="../../danh-muc/ban-ghe-sofa/index.html"> {{$pro->category->name}}</a></nav>
+                                                href=""> {{$pro->category->name}}</a></nav>
                                         <h1 class="product-title entry-title">
                                             {{$pro->name}}</h1>
 
@@ -69,20 +69,7 @@
                                                         <img width="100" height="100"src="{{url('uploads')}}/{{$pro->image}}"class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image"alt=""/></a>
                                                 </div>
                                             </li>
-                                            <li class="prod-dropdown has-dropdown">
-                                                <a href="" rel="next"
-                                                    class="button icon is-outline circle">
-                                                    <i class="icon-angle-right"></i> </a>
-                                                <div class="nav-dropdown">
-                                                    <a title="Ghế sofa SF01" href="">
-                                                        <img width="100" height="100"
-                                                            src="../../wp-content/uploads/2018/04/6-100x100.jpg"
-                                                            class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image"
-                                                            alt=""
-                                                            srcset="wp-content/uploads/2018/04/6-100x100.jpg 100w, wp-content/uploads/2018/04/6-150x150.jpg 150w, wp-content/uploads/2018/04/6-300x300.jpg 300w, wp-content/uploads/2018/04/6-24x24.jpg 24w, wp-content/uploads/2018/04/6-36x36.jpg 36w, wp-content/uploads/2018/04/6-48x48.jpg 48w, wp-content/uploads/2018/04/6.jpg 600w"
-                                                            sizes="(max-width: 100px) 100vw, 100px" /></a>
-                                                </div>
-                                            </li>
+                                            
                                         </ul>
                                         <div class="price-wrapper">
                                             <p class="price product-page-price ">
@@ -98,8 +85,8 @@
 
 
                                         <form class="cart"
-                                            action="san-pham/ghe-sofa-sf02/"
-                                            method="post" enctype='multipart/form-data'>
+                                            action="{{route('cart.add',$pro->id)}}"
+                                            method="" enctype='multipart/form-data'>
                                             <div class="quantity buttons_added">
                                                 <input type="button" value="-" class="minus button is-form"> <label
                                                     class="screen-reader-text" for="quantity_640600e41268c">Số lượng</label>

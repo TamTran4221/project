@@ -91,21 +91,6 @@
                             </li>
                             <li>
 
-                                <a href="../san-pham/sofa-go-huong-tay-10-cham-dao-slh087-2/index.html">
-                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/3-2-300x300.jpg"
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt=""
-                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-2-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-2-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-2-100x100.jpg 100w"
-                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Sofa gỗ Hương
-                                        tay 10 chạm đào - SLH087</span>
-                                </a>
-
-
-                                <span class="woocommerce-Price-amount amount">18,963,000&nbsp;<span
-                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
-                            </li>
-                            <li>
-
                                 <a href="../san-pham/bo-ban-ghe-an-go-soi-6-ghe-mau-2-tang-1m6-bas215/index.html">
                                     <img width="300" height="300" src="../wp-content/uploads/2018/04/04-300x300.jpg"
                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
@@ -131,42 +116,45 @@
                     <div class="products row row-small large-columns-3 medium-columns-3 small-columns-2">
                         @foreach ($product as $value)
                         <div class="product-small col has-hover post-431 product type-product status-publish has-post-thumbnail product_cat-ban-an first instock shipping-taxable purchasable product-type-simple">
-                            <div class="col-inner">
-                                <div class="badge-container absolute left top z-1"></div>
-                                <div class="product-small box ">
-                                    <div class="box-image">
-                                        <div class="image-zoom">
-                                            <a href="{{route('detail',['id'=>$value->id])}}">
-                                                <img width="300" height="300" src="{{url('uploads')}}/{{$value->image}}"
-                                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                    alt="" />
-                                            </a>
-                                            <div class="image-tools is-small top right show-on-hover"></div>
-                                            <div class="image-tools is-small hide-for-small bottom left show-on-hover">
+                            <div class="col" data-animate="bounceInRight">
+                                <div class="col-inner">
+
+                                    <div class="badge-container absolute left top z-1">
+                                    </div>
+                                    <div class="product-small box has-hover box-normal box-text-bottom">
+                                        <div class="box-image">
+                                            <div class="image-zoom">
+                                                <a href="{{route('detail',['id'=> $value->id])}}">
+                                                    <img width="300" height="300"
+                                                        src="{{url('uploads')}}/{{$value->image}}"class="attachment-shop_catalog size-shop_catalog wp-post-image"alt=""/>
+                                                </a>
+                                                        
+                                            </div>
+                                            <div class="image-tools top right show-on-hover">
                                             </div>
                                             <div
-                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                <a rel="nofollow" href="index086a.html?add-to-cart=431" data-quantity="1"
-                                                    data-product_id="431" data-product_sku=""
-                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                    style="width:0">
-                                                    <div class="cart-icon tooltip absolute is-small" title="Thêm vào giỏ">
-                                                        <strong>+</strong>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                                            <a rel="nofollow" href="{{route('cart.add', $value->id)}}"
+                                                
+                                                class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
+                                                style="width:0">
+                                                <div class="cart-icon tooltip absolute is-small"
+                                                    title="Thêm vào giỏ"><strong>+</strong></div>
+                                            </a>
+                                        </div>
                                         </div><!-- box-image -->
 
-                                        <div class="box-text box-text-products text-center grid-style-2">
+                                        <div class="box-text text-center">
                                             <div class="title-wrapper">
-                                                <p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$value->category->name}}</p>
-                                                <p class="name product-title"><a href="{{route('detail',['id'=>$value->id])}}">{{$value->name}}</a></p>
+                                                <p
+                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$value->category->name}} </p>
+                                                <p class="name product-title"><a
+                                                        href="{{route('detail',['id'=> $value->id])}}">{{$value->name}}</a></p>
                                             </div>
                                             <div class="price-wrapper">
-                                                <span class="price">
-                                                    <span class="woocommerce-Price-amount amount">{{number_format($value->price)}}<span
-                                                            class="woocommerce-Price-currencySymbol">&#8363;</span>
-                                                    </span></span>
+                                                <span class="price"><span
+                                                        class="woocommerce-Price-amount amount">{{number_format($value->price)}}<span
+                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
                                             </div>
                                         </div><!-- box-text -->
                                     </div><!-- box -->

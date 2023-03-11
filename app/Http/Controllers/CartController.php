@@ -11,9 +11,8 @@ class CartController extends Controller
 {
     public function view()
     {
-        $carts = session('cart') ? session('cart') : [];
 
-        return view ('layout.cart-view', compact('carts'));
+        return view ('layout.cart-view');
     }
 
     public function add(Cart $cart, Product $product)

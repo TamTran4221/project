@@ -28,6 +28,10 @@ class LayoutController extends Controller
     {
         return view('layout.news');
     }
+    public function pay()
+    {
+        return view('layout.pay');
+    }
     public function detail($id)
     {
         $pro = Product::find($id);

@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.home');
+    return view('layout.pay');
 });
 //view fe
 Route::get('home', [LayoutController::class, 'home'])->name('home');
@@ -30,6 +30,7 @@ Route::get('contact',[LayoutController::class, 'contact'])->name('contact');
 Route::get('detail/{id}',[LayoutController::class,'detail'])->name('detail');
 Route::get('/product/{slug}',[LayoutController::class,'category'])->name('category');
 Route::get('news',[LayoutController::class,'news'])->name('news');
+Route::get('pay',[LayoutController::class,'pay'])->name('pay');
 
 
 // đăng nhập admin

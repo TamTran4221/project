@@ -211,15 +211,15 @@
                                                 <div class="image-tools top right show-on-hover">
                                                 </div>
                                                 <div
-                                                    class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                    <a rel="nofollow" href="indexe590.html?add-to-cart=400"
-                                                        data-quantity="1" data-product_id="400" data-product_sku=""
-                                                        class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                        style="width:0">
-                                                        <div class="cart-icon tooltip absolute is-small"
-                                                            title="Thêm vào giỏ"><strong>+</strong></div>
-                                                    </a>
-                                                </div>
+                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                                                <a rel="nofollow" href="{{route('cart.add', $value->id)}}"
+                                                    
+                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
+                                                    style="width:0">
+                                                    <div class="cart-icon tooltip absolute is-small"
+                                                        title="Thêm vào giỏ"><strong>+</strong></div>
+                                                </a>
+                                            </div>
                                             </div><!-- box-image -->
 
                                             <div class="box-text text-center">
@@ -584,16 +584,16 @@
                                                 </div>
                                                 <div class="image-tools top right show-on-hover">
                                                 </div>
-                                                <div
-                                                    class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                    <a rel="nofollow" href="index7db7.html?add-to-cart=460"
-                                                        data-quantity="1" data-product_id="460" data-product_sku=""
-                                                        class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                        style="width:0">
-                                                        <div class="cart-icon tooltip absolute is-small"
-                                                            title="Thêm vào giỏ"><strong>+</strong></div>
-                                                    </a>
-                                                </div>
+                                                    <div
+                                                        class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                                                        <a rel="nofollow" href="{{route('cart.add', $value->id)}}"
+                                                            
+                                                            class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
+                                                            style="width:0">
+                                                            <div class="cart-icon tooltip absolute is-small"
+                                                                title="Thêm vào giỏ"><strong>+</strong></div>
+                                                        </a>
+                                                    </div>
                                             </div><!-- box-image -->
 
                                             <div class="box-text text-center">
@@ -747,8 +747,8 @@
                                                     </div>
                                                     <div
                                                         class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                        <a rel="nofollow" href="index1f3b.html?add-to-cart=445"
-                                                            data-quantity="1" data-product_id="445" data-product_sku=""
+                                                        <a rel="nofollow" href="{{route('cart.add', $value->id)}}"
+                                                            
                                                             class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
                                                             style="width:0">
                                                             <div class="cart-icon tooltip absolute is-small"
@@ -765,8 +765,7 @@
                                                     </div>
                                                     <div class="price-wrapper">
                                                         <span class="price"><span
-                                                                class="woocommerce-Price-amount amount">{{number_format($value->price)}}<span
-                                                                    class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
+                                                                class="woocommerce-Price-amount amount">{{number_format($value->price)}}</span></span>
                                                     </div>
                                                 </div><!-- box-text -->
                                             </div><!-- box -->

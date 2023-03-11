@@ -18,26 +18,21 @@
         <div class="row row-large ">
 
             <div class="large-9 col">
-
-
-
-
                 <div id="row-214244081"
                     class="row large-columns-3 medium-columns- small-columns-1 has-shadow row-box-shadow-1 row-box-shadow-2-hover row-masonry"
                     data-packery-options='{"itemSelector": ".col", "gutter": 0, "presentageWidth" : true}'>
 
                     <div class="col post-item">
                         <div class="col-inner">
-                            <a href="../../duis-luctus-elit-nisi-et-cursus-magna-pellentesque-non/index.html"
+                            <a href=""
                                 class="plain">
                                 <div class="box box-text-bottom box-blog-post has-hover">
                                     <div class="box-image">
                                         <div class="image-cover" style="padding-top:56%;">
                                             <img width="300" height="141"
-                                                src="../../wp-content/uploads/2018/04/14-300x141.jpg"
+                                                src="{{url('template/layout')}}/wp-content/uploads/2018/04/14-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
-                                                srcset="wp-content/uploads/2018/04/14-300x141.jpg 300w, wp-content/uploads/2018/04/14-768x360.jpg 768w, wp-content/uploads/2018/04/14.jpg 1024w, wp-content/uploads/2018/04/14-24x11.jpg 24w, wp-content/uploads/2018/04/14-36x17.jpg 36w, wp-content/uploads/2018/04/14-48x23.jpg 48w, wp-content/uploads/2018/04/14-600x281.jpg 600w"
-                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                 />
                                         </div>
                                     </div><!-- .box-image -->
                                     <div class="box-text text-left">
@@ -73,7 +68,7 @@
                                     <div class="box-image">
                                         <div class="image-cover" style="padding-top:56%;">
                                             <img width="300" height="141"
-                                                src="../../wp-content/uploads/2018/04/12-300x141.jpg"
+                                                src="{{url('template/layout')}}/wp-content/uploads/2018/04/12-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
                                                 srcset="wp-content/uploads/2018/04/12-300x141.jpg 300w, wp-content/uploads/2018/04/12-768x360.jpg 768w, wp-content/uploads/2018/04/12.jpg 1024w, wp-content/uploads/2018/04/12-24x11.jpg 24w, wp-content/uploads/2018/04/12-36x17.jpg 36w, wp-content/uploads/2018/04/12-48x23.jpg 48w, wp-content/uploads/2018/04/12-600x281.jpg 600w"
                                                 sizes="(max-width: 300px) 100vw, 300px" />
@@ -111,7 +106,7 @@
                                     <div class="box-image">
                                         <div class="image-cover" style="padding-top:56%;">
                                             <img width="300" height="141"
-                                                src="../../wp-content/uploads/2018/04/13-300x141.jpg"
+                                                src="{{url('template/layout')}}/wp-content/uploads/2018/04/13-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
                                                 srcset="wp-content/uploads/2018/04/13-300x141.jpg 300w, wp-content/uploads/2018/04/13-768x360.jpg 768w, wp-content/uploads/2018/04/13.jpg 1024w, wp-content/uploads/2018/04/13-24x11.jpg 24w, wp-content/uploads/2018/04/13-36x17.jpg 36w, wp-content/uploads/2018/04/13-48x23.jpg 48w, wp-content/uploads/2018/04/13-600x281.jpg 600w"
                                                 sizes="(max-width: 300px) 100vw, 300px" />
@@ -149,7 +144,7 @@
                                     <div class="box-image">
                                         <div class="image-cover" style="padding-top:56%;">
                                             <img width="300" height="141"
-                                                src="../../wp-content/uploads/2018/04/15-300x141.jpg"
+                                                src="{{url('template/layout')}}/wp-content/uploads/2018/04/15-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
                                                 srcset="wp-content/uploads/2018/04/15-300x141.jpg 300w, wp-content/uploads/2018/04/15-768x360.jpg 768w, wp-content/uploads/2018/04/15.jpg 1024w, wp-content/uploads/2018/04/15-24x11.jpg 24w, wp-content/uploads/2018/04/15-36x17.jpg 36w, wp-content/uploads/2018/04/15-48x23.jpg 48w, wp-content/uploads/2018/04/15-600x281.jpg 600w"
                                                 sizes="(max-width: 300px) 100vw, 300px" />
@@ -188,7 +183,7 @@
                                     <div class="box-image">
                                         <div class="image-cover" style="padding-top:56%;">
                                             <img width="300" height="141"
-                                                src="../../wp-content/uploads/2018/04/17-300x141.jpg"
+                                                src="{{url('template/layout')}}/wp-content/uploads/2018/04/17-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
                                                 srcset="wp-content/uploads/2018/04/17-300x141.jpg 300w, wp-content/uploads/2018/04/17-768x360.jpg 768w, wp-content/uploads/2018/04/17.jpg 1024w, wp-content/uploads/2018/04/17-24x11.jpg 24w, wp-content/uploads/2018/04/17-36x17.jpg 36w, wp-content/uploads/2018/04/17-48x23.jpg 48w, wp-content/uploads/2018/04/17-600x281.jpg 600w"
                                                 sizes="(max-width: 300px) 100vw, 300px" />
@@ -226,7 +221,7 @@
                                     <div class="box-image">
                                         <div class="image-cover" style="padding-top:56%;">
                                             <img width="300" height="141"
-                                                src="../../wp-content/uploads/2018/04/16-300x141.jpg"
+                                                src="{{url('template/layout')}}/wp-content/uploads/2018/04/16-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
                                                 srcset="wp-content/uploads/2018/04/16-300x141.jpg 300w, wp-content/uploads/2018/04/16-768x360.jpg 768w, wp-content/uploads/2018/04/16.jpg 1024w, wp-content/uploads/2018/04/16-24x11.jpg 24w, wp-content/uploads/2018/04/16-36x17.jpg 36w, wp-content/uploads/2018/04/16-48x23.jpg 48w, wp-content/uploads/2018/04/16-600x281.jpg 600w"
                                                 sizes="(max-width: 300px) 100vw, 300px" />
@@ -289,7 +284,7 @@
                                     <div class="flex-col mr-half">
                                         <div class="badge post-date  badge-outline">
                                             <div class="badge-inner bg-fill"
-                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url(../../wp-content/uploads/2018/04/14-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;>
+                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url({{url('template/layout')}}/wp-content/uploads/2018/04/14-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;">
                                     <span class="post-date-day">
                                                 08</span><br>
                                                 <span class="post-date-month is-xsmall">Th3</span>
@@ -312,7 +307,7 @@
                                     <div class="flex-col mr-half">
                                         <div class="badge post-date  badge-outline">
                                             <div class="badge-inner bg-fill"
-                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url(../../wp-content/uploads/2018/04/12-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;>
+                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url({{url('template/layout')}}/wp-content/uploads/2018/04/12-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;">
                                     <span class="post-date-day">
                                                 08</span><br>
                                                 <span class="post-date-month is-xsmall">Th3</span>
@@ -335,7 +330,7 @@
                                     <div class="flex-col mr-half">
                                         <div class="badge post-date  badge-outline">
                                             <div class="badge-inner bg-fill"
-                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url(../../wp-content/uploads/2018/04/13-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;>
+                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url({{url('template/layout')}}/wp-content/uploads/2018/04/13-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;">
                                     <span class="post-date-day">
                                                 08</span><br>
                                                 <span class="post-date-month is-xsmall">Th3</span>
@@ -359,7 +354,7 @@
                                     <div class="flex-col mr-half">
                                         <div class="badge post-date  badge-outline">
                                             <div class="badge-inner bg-fill"
-                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url(../../wp-content/uploads/2018/04/15-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;>
+                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url({{url('template/layout')}}/wp-content/uploads/2018/04/15-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;">
                                     <span class="post-date-day">
                                                 08</span><br>
                                                 <span class="post-date-month is-xsmall">Th3</span>
@@ -383,7 +378,7 @@
                                     <div class="flex-col mr-half">
                                         <div class="badge post-date  badge-outline">
                                             <div class="badge-inner bg-fill"
-                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url(../../wp-content/uploads/2018/04/17-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;>
+                                                style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url({{url('template/layout')}}/wp-content/uploads/2018/04/17-150x150.jpg); color:#fff; text-shadow:1px 1px 0px rgba(0,0,0,.5); border:0;">
                                     <span class="post-date-day">
                                                 08</span><br>
                                                 <span class="post-date-month is-xsmall">Th3</span>
