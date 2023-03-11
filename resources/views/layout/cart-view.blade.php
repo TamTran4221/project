@@ -68,7 +68,7 @@
 
                                                             <td class="product-price" data-title="Giá">
                                                                 <span
-                                                                    class="woocommerce-Price-amount amount">{{ $item->price }}<span
+                                                                    class="woocommerce-Price-amount amount">{{number_format( $item->price) }}<span
                                                                         class="woocommerce-Price-currencySymbol">&#8363;</span></span>
                                                             </td>
 
@@ -85,7 +85,7 @@
 
                                                             <td class="product-subtotal">
                                                                 <span
-                                                                    class="woocommerce-Price-amount amount">{{ $item->quantity * $item->price }}<span
+                                                                    class="woocommerce-Price-amount amount">{{ number_format($item->quantity * $item->price) }}<span
                                                                         class="woocommerce-Price-currencySymbol">&#8363;</span></span>
                                                             </td>
                                                         </tr>
@@ -131,11 +131,12 @@
                                                         <th>Tổng cộng</th>
                                                         <td data-title="Tổng cộng">
                                                             <span
-                                                                class="woocommerce-Price-amount amount">{{ $cart->totalAmount }}
+                                                                class="woocommerce-Price-amount amount">{{number_format( $cart->totalAmount )}}
                                                                 <span
                                                                     class="woocommerce-Price-currencySymbol">&#8363;</span></span>
                                                         </td>
                                                     </tr>
+
                                                 </table>
 
                                                 <div class="wc-proceed-to-checkout">

@@ -793,14 +793,8 @@
                                             <strong> {{$cart->totalQuantity}} </strong>
                                         </span>
                                     </a>
-
-                                    <ul class="nav-dropdown nav-dropdown-simple">
-                                        <li class="html widget_shopping_cart">
-                                            <div class="widget_shopping_cart_content">
-                                                <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
-                                            </div>
-                                        </li>
-                                    </ul><!-- .nav-dropdown -->
+                                    <x-mini-cart/>
+                                    <!-- .nav-dropdown -->
 
                                 </li>
                             </ul>
@@ -809,6 +803,7 @@
                         <!-- Mobile Right Elements -->
                         <div class="flex-col show-for-medium flex-right">
                             <ul class="mobile-nav nav nav-right ">
+                                @if ($cart->totalQuantity==0)
                                 <li class="cart-item has-icon">
 
                                     <a href="gio-hang/index.html"
@@ -842,6 +837,46 @@
                                     </div>
 
                                 </li>
+                                @else
+                                @foreach ($cart->items as $item)
+                                <div id="cart-popup" class="mfp-hide widget_shopping_cart">
+                                    <div class="cart-popup-inner inner-padding">
+                                        <div class="cart-popup-title text-center">
+                                            <h4 class="uppercase">Giỏ hàng</h4>
+                                            <div class="is-divider"></div>
+                                        </div>
+                                        <div class="widget_shopping_cart_content">
+                                            <ul class="woocommerce-mini-cart cart_list product_list_widget ">
+                                                <li class="woocommerce-mini-cart-item mini_cart_item">
+                                                    <a href="{{ route('cart.remove', $item->id) }}"
+                                                        class="remove remove_from_cart_button" aria-label="Xóa sản phẩm này" >&times;</a> 
+                                                        <a href="">
+                                                        <img width="300" height="300" src="{{ url('uploads') }}/{{ $item->image }}"class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"alt=""/>{{$item->name}}&nbsp; </a>
+                                
+                                                    <span class="quantity">{{$item->quantity}} &times; <span class="woocommerce-Price-amount amount">{{$item->price}}&nbsp;<span
+                                                                class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
+                                                </li>
+                                            </ul>
+                                
+                                            <p class="woocommerce-mini-cart__total total"><strong>Tổng cộng:</strong> <span
+                                                    class="woocommerce-Price-amount amount">{{$cart->totalAmount}}&nbsp;<span
+                                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span></p>
+                                
+                                
+                                            <p class="woocommerce-mini-cart__buttons buttons"><a
+                                                    href="" class="button wc-forward">Xem giỏ
+                                                    hàng</a><a href="{{route('pay')}}"
+                                                    class="button checkout wc-forward">Thanh toán</a></p>
+                                
+                                
+                                        </div>
+                                        <div class="cart-sidebar-content relative"></div>
+                                    </div>
+                                </div>
+                                @endforeach
+                                
+                                @endif
+                                
                             </ul>
                         </div>
 
@@ -1115,18 +1150,18 @@
                         <label for="username">Tên tài khoản hoặc địa chỉ email <span
                                 class="required">*</span></label>
                         <input type="text" class="woocommerce-Input woocommerce-Input--text input-text"
-                            name="username" id="username" value="" />
+                            name="" id="username" value="" />
                     </p>
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label for="password">Mật khẩu <span class="required">*</span></label>
+                        <label for="">Mật khẩu <span class="required">*</span></label>
                         <input class="woocommerce-Input woocommerce-Input--text input-text" type="password"
-                            name="password" id="password" />
+                            name="" id="password" />
                     </p>
                     <p class="form-row">
                         <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce"
                             value="a08ac36765" /><input type="hidden" name="_wp_http_referer"
-                            value="/noithatbanghe/" /> <button type="submit" class="woocommerce-Button button"
-                            name="login" value="Đăng nhập">Đăng nhập</button>
+                            value="" /> <button type="submit" class="woocommerce-Button button"
+                            name="" value="Đăng nhập">Đăng nhập</button>
                         <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
                             <input class="woocommerce-form__input woocommerce-form__input-checkbox"
                                 name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Ghi

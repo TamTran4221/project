@@ -68,4 +68,8 @@ class Cart {
 
         return $total;
     }
+    public function getItem()
+    {
+        return $this->items;
+    }
 }
