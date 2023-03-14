@@ -30,41 +30,37 @@
         <div class="row">
             <div class="col-12">
                     <div class="card-body">
-                        <a href="{{route('admin.product.create')}}" class="btn btn-success" style="margin: 20px">Thêm mới sản phẩm</a>
+                        <a href="{{route('user.create')}}" class="btn btn-success" style="margin: 20px">Thêm mới tài khoản</a>
                         <table id="example2" class="table table-bordered table-hover w-full">
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Avatar</th>
-                                    <th>Name</th>
+                                    <th>Tên</th>
                                     <th>Email</th>
-                                    <th>role</th>
-                                    <th>Created At</th>
-                                    <th>Updated At</th>
+                                    <th>Quyền</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Ngày Cập Nhật</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($users as $value)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td><img src="{{url('uploads')}}/{{ ($value->avatar != '')? $value->avatar: 'default_user.png'; }}" alt="Avatar" width="40px"></td>
                                         <td>{{ $value->name }}</td>
                                         <td>{{ $value->email }}</td>
-                                        <td><?php if ($value->role == 0) {
+                                        <td><?php if ($value->status == 1) {
                                                echo 'Người quản trị';
-                                            } else if ($value->role == 1) {
+                                            } else if ($value->status == 2) {
                                                 echo 'Khách Hàng';
-                                            } else {
-                                                echo 'Cộng tác viên';
-                                            } ?>
+                                            }?>
                                        </td>
                                         <td>{{ $value->created_at }}</td>
                                         <td>{{ $value->updated_at }}</td>
                                         <td>
-                                            <a href="{{ route('admin.user.edit', $value) }}" class="btn btn-primary">Edit</a>
+                                            <a href="{{ route('user.edit', $value) }}" class="btn btn-primary">Edit</a>
                                         </td>
                                         <td>
-                                            <form action="{{ route('admin.user.destroy', $value) }}" method="POST"
+                                            <form action="{{ route('user.destroy', $value) }}" method="POST"
                                                 onsubmit="return confirm('Bạn thực sự muốn xóa sản phẩm này?')">
                                                 @csrf
                                                 @method('DELETE')
