@@ -81,10 +81,10 @@
                                     </td>
                                     <td>{{ $item->note}}</td>
                                     <td>
-                                        <a href="{{route('list-detail.index')}}" class="btn btn-sm btn-danger">Chi tiết đơn hàng</a>
+                                        <a href="{{route('detail.index')}}" class="btn btn-sm btn-danger">Chi tiết đơn hàng</a>
                                     </td>
                                     <td>
-                                        <a href="{{route('cart.edit',$item)}}" class="btn btn-primary">Edit</a>
+                                        <a href="{{route('order.edit',$item)}}" class="btn btn-primary">Edit</a>
                                     </td>
                                 </tr>
                                 @endforeach
