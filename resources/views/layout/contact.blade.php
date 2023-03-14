@@ -8,15 +8,8 @@
 
             <section class="section sec_lien_he" id="section_2062859487">
                 <div class="bg section-bg fill bg-fill  ">
-
-
-
-
-
                 </div><!-- .section-bg -->
-
                 <div class="section-content relative">
-
                     <div class="row row-collapse" id="row-30152463">
                         <div class="col medium-5 small-12 large-5">
                             <div class="col-inner">

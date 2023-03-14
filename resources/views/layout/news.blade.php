@@ -62,7 +62,7 @@
                     </div><!-- .col -->
                     <div class="col post-item">
                         <div class="col-inner">
-                            <a href="../../mauris-tristique-pretium-tempus-vestibulum-et-accumsan-magna/index.html"
+                            <a href=""
                                 class="plain">
                                 <div class="box box-text-bottom box-blog-post has-hover">
                                     <div class="box-image">
@@ -70,8 +70,7 @@
                                             <img width="300" height="141"
                                                 src="{{url('template/layout')}}/wp-content/uploads/2018/04/12-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
-                                                srcset="wp-content/uploads/2018/04/12-300x141.jpg 300w, wp-content/uploads/2018/04/12-768x360.jpg 768w, wp-content/uploads/2018/04/12.jpg 1024w, wp-content/uploads/2018/04/12-24x11.jpg 24w, wp-content/uploads/2018/04/12-36x17.jpg 36w, wp-content/uploads/2018/04/12-48x23.jpg 48w, wp-content/uploads/2018/04/12-600x281.jpg 600w"
-                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                 />
                                         </div>
                                     </div><!-- .box-image -->
                                     <div class="box-text text-left">
@@ -100,7 +99,7 @@
                     </div><!-- .col -->
                     <div class="col post-item">
                         <div class="col-inner">
-                            <a href="../../aliquam-placerat-nisl-nec-imperdiet-vehicula-phasellus-tempus-ligula-id-orci-finibus-feugiat/index.html"
+                            <a href=""
                                 class="plain">
                                 <div class="box box-text-bottom box-blog-post has-hover">
                                     <div class="box-image">
@@ -108,8 +107,7 @@
                                             <img width="300" height="141"
                                                 src="{{url('template/layout')}}/wp-content/uploads/2018/04/13-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
-                                                srcset="wp-content/uploads/2018/04/13-300x141.jpg 300w, wp-content/uploads/2018/04/13-768x360.jpg 768w, wp-content/uploads/2018/04/13.jpg 1024w, wp-content/uploads/2018/04/13-24x11.jpg 24w, wp-content/uploads/2018/04/13-36x17.jpg 36w, wp-content/uploads/2018/04/13-48x23.jpg 48w, wp-content/uploads/2018/04/13-600x281.jpg 600w"
-                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                />
                                         </div>
                                     </div><!-- .box-image -->
                                     <div class="box-text text-left">
@@ -138,7 +136,7 @@
                     </div><!-- .col -->
                     <div class="col post-item">
                         <div class="col-inner">
-                            <a href="../../in-rutrum-tempus-purus-ut-euismod-dui-facilisis-ac-fusce-semper-dignissim-diam-a-egestas/index.html"
+                            <a href=""
                                 class="plain">
                                 <div class="box box-text-bottom box-blog-post has-hover">
                                     <div class="box-image">
@@ -146,8 +144,7 @@
                                             <img width="300" height="141"
                                                 src="{{url('template/layout')}}/wp-content/uploads/2018/04/15-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
-                                                srcset="wp-content/uploads/2018/04/15-300x141.jpg 300w, wp-content/uploads/2018/04/15-768x360.jpg 768w, wp-content/uploads/2018/04/15.jpg 1024w, wp-content/uploads/2018/04/15-24x11.jpg 24w, wp-content/uploads/2018/04/15-36x17.jpg 36w, wp-content/uploads/2018/04/15-48x23.jpg 48w, wp-content/uploads/2018/04/15-600x281.jpg 600w"
-                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                 />
                                         </div>
                                     </div><!-- .box-image -->
                                     <div class="box-text text-left">
@@ -177,7 +174,7 @@
                     </div><!-- .col -->
                     <div class="col post-item">
                         <div class="col-inner">
-                            <a href="../../donec-tempus-eu-ligula-sed-blandit-vivamus-vel-enim-ac-quam-iaculis-rutrum/index.html"
+                            <a href=""
                                 class="plain">
                                 <div class="box box-text-bottom box-blog-post has-hover">
                                     <div class="box-image">
@@ -185,8 +182,7 @@
                                             <img width="300" height="141"
                                                 src="{{url('template/layout')}}/wp-content/uploads/2018/04/17-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
-                                                srcset="wp-content/uploads/2018/04/17-300x141.jpg 300w, wp-content/uploads/2018/04/17-768x360.jpg 768w, wp-content/uploads/2018/04/17.jpg 1024w, wp-content/uploads/2018/04/17-24x11.jpg 24w, wp-content/uploads/2018/04/17-36x17.jpg 36w, wp-content/uploads/2018/04/17-48x23.jpg 48w, wp-content/uploads/2018/04/17-600x281.jpg 600w"
-                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                 />
                                         </div>
                                     </div><!-- .box-image -->
                                     <div class="box-text text-left">
@@ -215,7 +211,7 @@
                     </div><!-- .col -->
                     <div class="col post-item">
                         <div class="col-inner">
-                            <a href="../../lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit/index.html"
+                            <a href=""
                                 class="plain">
                                 <div class="box box-text-bottom box-blog-post has-hover">
                                     <div class="box-image">
@@ -223,8 +219,7 @@
                                             <img width="300" height="141"
                                                 src="{{url('template/layout')}}/wp-content/uploads/2018/04/16-300x141.jpg"
                                                 class="attachment-medium size-medium wp-post-image" alt=""
-                                                srcset="wp-content/uploads/2018/04/16-300x141.jpg 300w, wp-content/uploads/2018/04/16-768x360.jpg 768w, wp-content/uploads/2018/04/16.jpg 1024w, wp-content/uploads/2018/04/16-24x11.jpg 24w, wp-content/uploads/2018/04/16-36x17.jpg 36w, wp-content/uploads/2018/04/16-48x23.jpg 48w, wp-content/uploads/2018/04/16-600x281.jpg 600w"
-                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                 />
                                         </div>
                                     </div><!-- .box-image -->
                                     <div class="box-text text-left">
@@ -296,7 +291,7 @@
                                             title="Duis luctus elit nisi, et cursus magna pellentesque non.">Duis
                                             luctus elit nisi, et cursus magna pellentesque non.</a>
                                         <span class="post_comments oppercase op-7 block is-xsmall"><a
-                                                href="../../duis-luctus-elit-nisi-et-cursus-magna-pellentesque-non/index.html#respond"></a></span>
+                                                href=""></a></span>
                                     </div>
                                 </div><!-- .flex-row -->
                             </li>
@@ -315,11 +310,11 @@
                                         </div>
                                     </div><!-- .flex-col -->
                                     <div class="flex-col flex-grow">
-                                        <a href="../../mauris-tristique-pretium-tempus-vestibulum-et-accumsan-magna/index.html"
+                                        <a href=""
                                             title="Mauris tristique pretium tempus. Vestibulum et accumsan magna.">Mauris
                                             tristique pretium tempus. Vestibulum et accumsan magna.</a>
                                         <span class="post_comments oppercase op-7 block is-xsmall"><a
-                                                href="../../mauris-tristique-pretium-tempus-vestibulum-et-accumsan-magna/index.html#respond"></a></span>
+                                                href=""></a></span>
                                     </div>
                                 </div><!-- .flex-row -->
                             </li>
@@ -338,12 +333,12 @@
                                         </div>
                                     </div><!-- .flex-col -->
                                     <div class="flex-col flex-grow">
-                                        <a href="../../aliquam-placerat-nisl-nec-imperdiet-vehicula-phasellus-tempus-ligula-id-orci-finibus-feugiat/index.html"
+                                        <a href=""
                                             title="Aliquam placerat nisl nec imperdiet vehicula. Phasellus tempus ligula id orci finibus feugiat.">Aliquam
                                             placerat nisl nec imperdiet vehicula. Phasellus tempus ligula id orci
                                             finibus feugiat.</a>
                                         <span class="post_comments oppercase op-7 block is-xsmall"><a
-                                                href="../../aliquam-placerat-nisl-nec-imperdiet-vehicula-phasellus-tempus-ligula-id-orci-finibus-feugiat/index.html#respond"></a></span>
+                                                href=""></a></span>
                                     </div>
                                 </div><!-- .flex-row -->
                             </li>
@@ -362,12 +357,12 @@
                                         </div>
                                     </div><!-- .flex-col -->
                                     <div class="flex-col flex-grow">
-                                        <a href="../../in-rutrum-tempus-purus-ut-euismod-dui-facilisis-ac-fusce-semper-dignissim-diam-a-egestas/index.html"
+                                        <a href=""
                                             title="In rutrum tempus purus, ut euismod dui facilisis ac. Fusce semper dignissim diam a egestas.">In
                                             rutrum tempus purus, ut euismod dui facilisis ac. Fusce semper dignissim
                                             diam a egestas.</a>
                                         <span class="post_comments oppercase op-7 block is-xsmall"><a
-                                                href="../../in-rutrum-tempus-purus-ut-euismod-dui-facilisis-ac-fusce-semper-dignissim-diam-a-egestas/index.html#respond"></a></span>
+                                                href=""></a></span>
                                     </div>
                                 </div><!-- .flex-row -->
                             </li>
@@ -386,11 +381,11 @@
                                         </div>
                                     </div><!-- .flex-col -->
                                     <div class="flex-col flex-grow">
-                                        <a href="../../donec-tempus-eu-ligula-sed-blandit-vivamus-vel-enim-ac-quam-iaculis-rutrum/index.html"
+                                        <a href=""
                                             title="Donec tempus eu ligula sed blandit. Vivamus vel enim ac quam iaculis rutrum.">Donec
                                             tempus eu ligula sed blandit. Vivamus vel enim ac quam iaculis rutrum.</a>
                                         <span class="post_comments oppercase op-7 block is-xsmall"><a
-                                                href="../../donec-tempus-eu-ligula-sed-blandit-vivamus-vel-enim-ac-quam-iaculis-rutrum/index.html#respond"></a></span>
+                                                href=""></a></span>
                                     </div>
                                 </div><!-- .flex-row -->
                             </li>

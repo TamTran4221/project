@@ -603,7 +603,7 @@
                                                 </div>
                                                 <div class="price-wrapper">
                                                     <span class="price"><span
-                                                            class="woocommerce-Price-amount amount">{{number_format($value->price)}};<span
+                                                            class="woocommerce-Price-amount amount">{{number_format($value->price)}}<span
                                                                 class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
                                                 </div>
                                             </div><!-- box-text -->
@@ -765,7 +765,7 @@
                                                     </div>
                                                     <div class="price-wrapper">
                                                         <span class="price"><span
-                                                                class="woocommerce-Price-amount amount">{{number_format($value->price)}}</span></span>
+                                                                class="woocommerce-Price-amount amount">{{number_format($value->price)}}đ</span></span>
                                                     </div>
                                                 </div><!-- box-text -->
                                             </div><!-- box -->
@@ -837,11 +837,10 @@
                                                 <div class="box-image">
                                                     <div class="image-zoom image-cover" style="padding-top:56.25%;">
                                                         <img width="1024" height="480"
-                                                            src="wp-content/uploads/2018/04/14.jpg"
+                                                            src="{{url('template/layout')}}/wp-content/uploads/2018/04/14.jpg"
                                                             class="attachment-original size-original wp-post-image"
                                                             alt=""
-                                                            srcset="wp-content/uploads/2018/04/14.jpg 1024w, wp-content/uploads/2018/04/14-300x141.jpg 300w, wp-content/uploads/2018/04/14-768x360.jpg 768w, wp-content/uploads/2018/04/14-24x11.jpg 24w, wp-content/uploads/2018/04/14-36x17.jpg 36w, wp-content/uploads/2018/04/14-48x23.jpg 48w, wp-content/uploads/2018/04/14-600x281.jpg 600w"
-                                                            sizes="(max-width: 1024px) 100vw, 1024px" />
+                                                             />
                                                     </div>
                                                 </div><!-- .box-image -->
                                                 <div class="box-text text-left">
@@ -881,11 +880,10 @@
                                                 <div class="box-image">
                                                     <div class="image-zoom image-cover" style="padding-top:56.25%;">
                                                         <img width="1024" height="480"
-                                                            src="wp-content/uploads/2018/04/12.jpg"
+                                                            src="{{url('template/layout')}}/wp-content/uploads/2018/04/12.jpg"
                                                             class="attachment-original size-original wp-post-image"
                                                             alt=""
-                                                            srcset="wp-content/uploads/2018/04/12.jpg 1024w, wp-content/uploads/2018/04/12-300x141.jpg 300w, wp-content/uploads/2018/04/12-768x360.jpg 768w, wp-content/uploads/2018/04/12-24x11.jpg 24w, wp-content/uploads/2018/04/12-36x17.jpg 36w, wp-content/uploads/2018/04/12-48x23.jpg 48w, wp-content/uploads/2018/04/12-600x281.jpg 600w"
-                                                            sizes="(max-width: 1024px) 100vw, 1024px" />
+                                                             />
                                                     </div>
                                                 </div><!-- .box-image -->
                                                 <div class="box-text text-left">
@@ -924,11 +922,10 @@
                                                 <div class="box-image">
                                                     <div class="image-zoom image-cover" style="padding-top:56.25%;">
                                                         <img width="1024" height="480"
-                                                            src="wp-content/uploads/2018/04/13.jpg"
+                                                            src="{{url('template/layout')}}/wp-content/uploads/2018/04/13.jpg"
                                                             class="attachment-original size-original wp-post-image"
                                                             alt=""
-                                                            srcset="wp-content/uploads/2018/04/13.jpg 1024w, wp-content/uploads/2018/04/13-300x141.jpg 300w, wp-content/uploads/2018/04/13-768x360.jpg 768w, wp-content/uploads/2018/04/13-24x11.jpg 24w, wp-content/uploads/2018/04/13-36x17.jpg 36w, wp-content/uploads/2018/04/13-48x23.jpg 48w, wp-content/uploads/2018/04/13-600x281.jpg 600w"
-                                                            sizes="(max-width: 1024px) 100vw, 1024px" />
+                                                             />
                                                     </div>
                                                 </div><!-- .box-image -->
                                                 <div class="box-text text-left">
@@ -969,11 +966,10 @@
                                                 <div class="box-image">
                                                     <div class="image-zoom image-cover" style="padding-top:56.25%;">
                                                         <img width="1024" height="480"
-                                                            src="wp-content/uploads/2018/04/15.jpg"
+                                                            src="{{url('template/layout')}}/wp-content/uploads/2018/04/15.jpg"
                                                             class="attachment-original size-original wp-post-image"
                                                             alt=""
-                                                            srcset="wp-content/uploads/2018/04/15.jpg 1024w, wp-content/uploads/2018/04/15-300x141.jpg 300w, wp-content/uploads/2018/04/15-768x360.jpg 768w, wp-content/uploads/2018/04/15-24x11.jpg 24w, wp-content/uploads/2018/04/15-36x17.jpg 36w, wp-content/uploads/2018/04/15-48x23.jpg 48w, wp-content/uploads/2018/04/15-600x281.jpg 600w"
-                                                            sizes="(max-width: 1024px) 100vw, 1024px" />
+                                                             />
                                                     </div>
                                                 </div><!-- .box-image -->
                                                 <div class="box-text text-left">
@@ -1014,11 +1010,10 @@
                                                 <div class="box-image">
                                                     <div class="image-zoom image-cover" style="padding-top:56.25%;">
                                                         <img width="1024" height="480"
-                                                            src="wp-content/uploads/2018/04/17.jpg"
+                                                            src="{{url('template/layout')}}/wp-content/uploads/2018/04/17.jpg"
                                                             class="attachment-original size-original wp-post-image"
                                                             alt=""
-                                                            srcset="wp-content/uploads/2018/04/17.jpg 1024w, wp-content/uploads/2018/04/17-300x141.jpg 300w, wp-content/uploads/2018/04/17-768x360.jpg 768w, wp-content/uploads/2018/04/17-24x11.jpg 24w, wp-content/uploads/2018/04/17-36x17.jpg 36w, wp-content/uploads/2018/04/17-48x23.jpg 48w, wp-content/uploads/2018/04/17-600x281.jpg 600w"
-                                                            sizes="(max-width: 1024px) 100vw, 1024px" />
+                                                             />
                                                     </div>
                                                 </div><!-- .box-image -->
                                                 <div class="box-text text-left">
@@ -1059,11 +1054,10 @@
                                                 <div class="box-image">
                                                     <div class="image-zoom image-cover" style="padding-top:56.25%;">
                                                         <img width="1024" height="480"
-                                                            src="wp-content/uploads/2018/04/16.jpg"
+                                                            src="{{url('template/layout')}}/wp-content/uploads/2018/04/16.jpg"
                                                             class="attachment-original size-original wp-post-image"
                                                             alt=""
-                                                            srcset="wp-content/uploads/2018/04/16.jpg 1024w, wp-content/uploads/2018/04/16-300x141.jpg 300w, wp-content/uploads/2018/04/16-768x360.jpg 768w, wp-content/uploads/2018/04/16-24x11.jpg 24w, wp-content/uploads/2018/04/16-36x17.jpg 36w, wp-content/uploads/2018/04/16-48x23.jpg 48w, wp-content/uploads/2018/04/16-600x281.jpg 600w"
-                                                            sizes="(max-width: 1024px) 100vw, 1024px" />
+                                                            />
                                                     </div>
                                                 </div><!-- .box-image -->
                                                 <div class="box-text text-left">

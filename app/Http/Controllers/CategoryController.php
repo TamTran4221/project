@@ -37,7 +37,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $cate = Category::create($request->all());
-        return redirect()->route('category.index');
+        return redirect()->route('category.index')->with('success','Thêm mới thành công');
     }
     
 
@@ -76,7 +76,7 @@ class CategoryController extends Controller
     {
         $cate = Category::find($id);
         $cate->update($request->all());
-        return redirect()->route('category.index');
+        return redirect()->route('category.index')->with('success','Đã cập nhật');
     }
 
     /**
@@ -88,6 +88,6 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $cate = Category::find($id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Xóa thành công');
     }
 }

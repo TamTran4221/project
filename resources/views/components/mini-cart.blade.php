@@ -37,7 +37,7 @@
 
                     <p class="woocommerce-mini-cart__buttons buttons">
                         <a href="" class="button wc-forward">Xem giỏ hàng</a>
-                        <a href="{{ route('pay') }}" class="button checkout wc-forward">Thanh toán</a>
+                        <a href="{{ route('cart.checkout') }}" class="button checkout wc-forward">Thanh toán</a>
                     </p>
 
 

@@ -44,66 +44,19 @@
                             class="widget-title shop-sidebar">Sản phẩm</span>
                         <div class="is-divider small"></div>
                         <ul class="product_list_widget">
-                            <li>
-
-                                <a href="../san-pham/ke-tivi-go-dinh-huong/index.html">
-                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/4-3-300x300.jpg"
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt=""
-                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-3-100x100.jpg 100w"
-                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Kệ Tivi Gỗ
-                                        Đinh Hương</span>
-                                </a>
-
-
-                                <span class="woocommerce-Price-amount amount">8,952,300&nbsp;<span
-                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
-                            </li>
-                            <li>
-
-                                <a href="../san-pham/bo-ban-ghe-an-go-soi-6-ghe-vat-goc-boc/index.html">
-                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/05-300x300.jpg"
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt=""
-                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/05-100x100.jpg 100w"
-                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Bộ bàn ghế ăn
-                                        gỗ Sồi 6 ghế vát góc bọc</span>
-                                </a>
-
-
-                                <span class="woocommerce-Price-amount amount">7,459,000&nbsp;<span
-                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
-                            </li>
-                            <li>
-
-                                <a href="../san-pham/bo-ban-ghe-an-go-cao-su/index.html">
-                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/09-300x300.jpg"
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt=""
-                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/09-100x100.jpg 100w"
-                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Bộ bàn ghế ăn
-                                        gỗ Cao Su</span>
-                                </a>
-
-
-                                <span class="woocommerce-Price-amount amount">5,471,000&nbsp;<span
-                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
-                            </li>
-                            <li>
-
-                                <a href="../san-pham/bo-ban-ghe-an-go-soi-6-ghe-mau-2-tang-1m6-bas215/index.html">
-                                    <img width="300" height="300" src="../wp-content/uploads/2018/04/04-300x300.jpg"
-                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                        alt=""
-                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/04-100x100.jpg 100w"
-                                        sizes="(max-width: 300px) 100vw, 300px" /> <span class="product-title">Bộ bàn ghế
-                                        ăn gỗ Sồi 6 ghế mẫu 2 tầng 1m6 - BAS215</span>
-                                </a>
-
-
-                                <span class="woocommerce-Price-amount amount">7,568,000&nbsp;<span
-                                        class="woocommerce-Price-currencySymbol">&#8363;</span></span>
-                            </li>
+                           
+                           @foreach ( $ramdomProducts as $item)
+                           <li>
+                            <a href="{{route('detail',['id'=> $item->id])}}">
+                                <img width="300" height="300" src="{{url('uploads')}}/{{$item->image}}"
+                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                    alt=""
+                                    /> <span class="product-title">{{$item->name}}</span>
+                            </a>
+                            <span class="woocommerce-Price-amount amount">{{number_format($item->price)}}&nbsp;<span
+                                    class="woocommerce-Price-currencySymbol">&#8363;</span></span>
+                        </li>
+                           @endforeach
                         </ul>
                     </aside>
                 </div><!-- .sidebar-inner -->

@@ -69,7 +69,8 @@
                         <div class="icon-box-img has-icon-bg" style="width: 53px">
                     <div class="icon">
                         <div class="icon-inner" style="border-width:2px;color:rgb(226, 186, 72);">
-                            <img width="128" height="128" src="{{url('template/layout')}}/wp-content/uploads/2018/04/agenda.png" class="attachment-medium size-medium" alt="" srcset="wp-content/uploads/2018/04/agenda.png 128w, wp-content/uploads/2018/04/agenda-24x24.png 24w, wp-content/uploads/2018/04/agenda-36x36.png 36w, wp-content/uploads/2018/04/agenda-48x48.png 48w, wp-content/uploads/2018/04/agenda-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />					</div>
+                            <img width="128" height="128" src="{{url('template/layout')}}/wp-content/uploads/2018/04/agenda.png" class="attachment-medium size-medium" alt=""  />				
+                        	</div>
                     </div>
                 </div>
                     <div class="icon-box-text last-reset">
@@ -92,7 +93,8 @@
                         <div class="icon-box-img has-icon-bg" style="width: 53px">
                     <div class="icon">
                         <div class="icon-inner" style="border-width:2px;color:rgb(226, 186, 72);">
-                            <img width="128" height="128" src="{{url('template/layout')}}/wp-content/uploads/2018/04/smartphone.png" class="attachment-medium size-medium" alt="" srcset="wp-content/uploads/2018/04/smartphone.png 128w, wp-content/uploads/2018/04/smartphone-24x24.png 24w, wp-content/uploads/2018/04/smartphone-36x36.png 36w, wp-content/uploads/2018/04/smartphone-48x48.png 48w, wp-content/uploads/2018/04/smartphone-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />					</div>
+                            <img width="128" height="128" src="{{url('template/layout')}}/wp-content/uploads/2018/04/smartphone.png" class="attachment-medium size-medium" alt=""  />					
+                        </div>
                     </div>
                 </div>
                     <div class="icon-box-text last-reset">
@@ -116,7 +118,8 @@
                         <div class="icon-box-img has-icon-bg" style="width: 53px">
                     <div class="icon">
                         <div class="icon-inner" style="border-width:2px;color:rgb(226, 186, 72);">
-                            <img width="128" height="128" src="{{url('template/layout')}}/wp-content/uploads/2018/04/mail.png" class="attachment-medium size-medium" alt="" srcset="wp-content/uploads/2018/04/mail.png 128w, wp-content/uploads/2018/04/mail-24x24.png 24w, wp-content/uploads/2018/04/mail-36x36.png 36w, wp-content/uploads/2018/04/mail-48x48.png 48w, wp-content/uploads/2018/04/mail-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />					</div>
+                            <img width="128" height="128" src="{{url('template/layout')}}/wp-content/uploads/2018/04/mail.png" class="attachment-medium size-medium" alt=""/> 
+                        </div>
                     </div>
                 </div>
                     <div class="icon-box-text last-reset">

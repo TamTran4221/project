@@ -865,7 +865,7 @@
                                 
                                             <p class="woocommerce-mini-cart__buttons buttons"><a
                                                     href="" class="button wc-forward">Xem giỏ
-                                                    hàng</a><a href="{{route('pay')}}"
+                                                    hàng</a><a href="{{route('cart.checkout')}}"
                                                     class="button checkout wc-forward">Thanh toán</a></p>
                                 
                                 
@@ -1145,7 +1145,7 @@
         <div class="account-container lightbox-inner">
             <div class="account-login-inner">
                 <h3 class="uppercase">Đăng nhập</h3>
-                <form class="woocommerce-form woocommerce-form-login login" method="post">
+                <form class="woocommerce-form woocommerce-form-login login" method="POST">
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                         <label for="username">Tên tài khoản hoặc địa chỉ email <span
                                 class="required">*</span></label>

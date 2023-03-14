@@ -1,173 +1,150 @@
 @extends('admin')
 @section('content')
-    
-<!DOCTYPE html>
-<html lang="en">
-
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="/admin" class="brand-link">
-        <img src="/template/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
-      </a>
-  
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar user (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="image">
-            <img src="/template/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-          </div>
-          <div class="info">
-            <a href="#" class="d-block">Alexander Pierce</a>
-          </div>
+    <aside
+        class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark ps ps--active-y bg-white"
+        id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0"
+                href=" https://demos.creative-tim.com/material-dashboard-pro/pages/dashboards/analytics.html "
+                target="_blank">
+                <img src="{{url('template/admin')}}/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span>
+            </a>
         </div>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="form-inline">
-            <div class="input-group" data-widget="sidebar-search">
-              <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-sidebar">
-                  <i class="fas fa-search fa-fw"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Quản Lý Danh Mục
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('category.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm danh mục</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('category.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Danh sách danh mục</p>
-                </a>
-              </li>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse w-auto h-auto ps" id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item mb-2 mt-0">
+                    <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav"
+                        role="button" aria-expanded="false">
+                        <img src="{{url('template/admin')}}/assets/img/team-3.jpg" class="avatar">
+                        <span class="nav-link-text ms-2 ps-1">Brooklyn Alice</span>
+                    </a>
+                </li>
+                <hr class="horizontal light mt-0">
+                <li class="nav-item">
+                    
+                        <ul class="nav ">
+                            <li class="nav-item ">
+                                <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false"
+                                    href="#profileExample">
+                                    <span class="sidenav-mini-icon"> C </span>
+                                    <span class="sidenav-normal  ms-2  ps-1"> Quản lý danh mục <b class="caret"></b></span>
+                                </a>
+                                <div class="collapse " id="profileExample">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white "
+                                                href="{{route('category.create')}}">
+                                                <span class="sidenav-mini-icon"> A </span>
+                                                <span class="sidenav-normal  ms-2  ps-1"> Thêm mới danh mục </span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white "
+                                                href="{{route('category.index')}}">
+                                                <span class="sidenav-mini-icon"> L </span>
+                                                <span class="sidenav-normal  ms-2  ps-1"> Danh sách danh mục </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false"
+                                    href="#usersExample">
+                                    <span class="sidenav-mini-icon"> U </span>
+                                    <span class="sidenav-normal  ms-2  ps-1"> Người dùng <b class="caret"></b></span>
+                                </a>
+                                <div class="collapse " id="usersExample">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white " href="">
+                                                <span class="sidenav-mini-icon"> A </span>
+                                                <span class="sidenav-normal  ms-2  ps-1"> Thêm mới người dùng </span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white " href="">
+                                                <span class="sidenav-mini-icon"> L </span>
+                                                <span class="sidenav-normal  ms-2  ps-1"> Danh sách người dùng </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false"
+                                    href="#accountExample">
+                                    <span class="sidenav-mini-icon"> P </span>
+                                    <span class="sidenav-normal  ms-2  ps-1"> Quản lý dản phẩm <b class="caret"></b></span>
+                                </a>
+                                <div class="collapse " id="accountExample">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white "
+                                                href="{{ route('product.create') }}">
+                                                <span class="sidenav-mini-icon"> A </span>
+                                                <span class="sidenav-normal  ms-2  ps-1"> Thêm mới sản phẩm </span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white " href="{{ route('product.index') }}">
+                                                <span class="sidenav-mini-icon"> L </span>
+                                                <span class="sidenav-normal  ms-2  ps-1"> Danh sách sản phẩm </span>
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false"
+                                    href="#projectsExample">
+                                    <span class="sidenav-mini-icon"> B </span>
+                                    <span class="sidenav-normal  ms-2  ps-1"> Quản lý đơn hàng <b class="caret"></b></span>
+                                </a>
+                                <div class="collapse " id="projectsExample">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white "
+                                                href="{{route('cart.index')}}">
+                                                <span class="sidenav-mini-icon"> L </span>
+                                                <span class="sidenav-normal  ms-2  ps-1"> Danh sách đơn hàng </span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-white "
+                                                href="">
+                                                <span class="sidenav-mini-icon"> T </span>
+                                                <span class="sidenav-normal  ms-2  ps-1"> Timeline </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            
+                        </ul>
+                    
+                </li>
+               
             </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-chart-pie mr-1"></i>
-              <p>
-                Quản Lý Sản Phẩm
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('product.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm mới sản phẩm</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('product.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Danh sách sản phẩm</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-chart-pie mr-1"></i>
-              <p>
-                Quản Lý Blog
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('blog.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm mới Blog</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('blog.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Danh sách Blog</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-12">
-            <!-- jquery validation -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">{{$title}}</h3>
-              </div>
-                @yield('noidung')
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
             </div>
-            <!-- /.card -->
+            <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
             </div>
-          <!--/.col (left) -->
-          <!-- right column -->
-          <div class="col-md-6">
-
-          </div>
-          <!--/.col (right) -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
-    </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
-<!-- ./wrapper -->
-</body>
-</html>
-
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+        </div>
+        <div class="ps__rail-y" style="top: 0px; height: 905px; right: 0px;">
+            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 885px;"></div>
+        </div>
+    </aside>
+    @yield('noidung')
 @endsection

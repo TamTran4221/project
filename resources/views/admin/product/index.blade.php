@@ -51,11 +51,11 @@
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Name</th>
-                                    <th> Price</th>
-                                    <th>Image</th>
-                                    <th>Description</th>
-                                    <th>Category</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá sản phẩm</th>
+                                    <th>Ảnh mô tả</th>
+                                    <th>Mô tả sản phẩm</th>
+                                    <th>Danh mục</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -98,7 +98,7 @@
                                             </div>
 
                                             <button type="submit" name="add-to-cart" value="371"
-                                                class="single_add_to_cart_button button alt">Thêm vào giỏ</button>
+                                                class="single_add_to_cart_button button alt">Thêm vào giỏ hàng</button>
 
                                         </form>
 
@@ -232,7 +232,7 @@
 
                                         <h3
                                             class="product-section-title container-width product-section-title-related pt-half pb-half uppercase">
-                                            Sản phẩm khác </h3>
+                                            Sản phẩm tương tự </h3>
 
 
 
@@ -241,452 +241,59 @@
 
 
 
+                                        @foreach ($product as $item)
+                                        <div
+                                        class="product-small col has-hover post-369 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa  instock shipping-taxable purchasable product-type-simple">
+                                        <div class="col-inner">
 
-                                            <div
-                                                class="product-small col has-hover post-369 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa  instock shipping-taxable purchasable product-type-simple">
-                                                <div class="col-inner">
-
-                                                    <div class="badge-container absolute left top z-1">
+                                            <div class="badge-container absolute left top z-1">
+                                            </div>
+                                            <div class="product-small box ">
+                                                <div class="box-image">
+                                                    <div class="image-zoom">
+                                                        <a href="{{route('detail',['id'=>$item->id])}}">
+                                                            <img width="300" height="300"
+                                                                src="{{url('uploads')}}/{{$item->image}}"class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"alt=""/> 
+                                                        </a>
                                                     </div>
-                                                    <div class="product-small box ">
-                                                        <div class="box-image">
-                                                            <div class="image-zoom">
-                                                                <a href="../ghe-sofa-sf01/index.html">
-                                                                    <img width="300" height="300"
-                                                                        src="../../wp-content/uploads/2018/04/6-300x300.jpg"
-                                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                                        alt=""
-                                                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/6-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/6-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/6-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/6-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/6-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/6.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/6-100x100.jpg 100w"
-                                                                        sizes="(max-width: 300px) 100vw, 300px" /> </a>
-                                                            </div>
-                                                            <div class="image-tools is-small top right show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                                <a rel="nofollow" href="index178e.html?add-to-cart=369"
-                                                                    data-quantity="1" data-product_id="369"
-                                                                    data-product_sku=""
-                                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                                    style="width:0">
-                                                                    <div class="cart-icon tooltip absolute is-small"
-                                                                        title="Thêm vào giỏ"><strong>+</strong></div>
-                                                                </a>
-                                                            </div>
-                                                        </div><!-- box-image -->
-
-                                                        <div class="box-text box-text-products text-center grid-style-2">
-                                                            <div class="title-wrapper">
-                                                                <p
-                                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                                                    BÀN GHẾ SOFA </p>
-                                                                <p class="name product-title"><a
-                                                                        href="../ghe-sofa-sf01/index.html">Ghế sofa
-                                                                        SF01</a></p>
-                                                            </div>
-                                                            <div class="price-wrapper">
-                                                                <span class="price"><span
-                                                                        class="woocommerce-Price-amount amount">20,896,000&nbsp;<span
-                                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-                                                            </div>
-                                                        </div><!-- box-text -->
-                                                    </div><!-- box -->
-                                                </div><!-- .col-inner -->
-                                            </div><!-- col -->
-
-
-
-                                            <div
-                                                class="product-small col has-hover post-390 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa  instock shipping-taxable purchasable product-type-simple">
-                                                <div class="col-inner">
-
-                                                    <div class="badge-container absolute left top z-1">
+                                                    <div class="image-tools is-small top right show-on-hover">
                                                     </div>
-                                                    <div class="product-small box ">
-                                                        <div class="box-image">
-                                                            <div class="image-zoom">
-                                                                <a href="../ghe-sofa-sf33/index.html">
-                                                                    <img width="300" height="300"
-                                                                        src="../../wp-content/uploads/2018/04/7-300x300.jpg"
-                                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                                        alt=""
-                                                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/7-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/7-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/7-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/7-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/7-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/7.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/7-100x100.jpg 100w"
-                                                                        sizes="(max-width: 300px) 100vw, 300px" /> </a>
-                                                            </div>
-                                                            <div class="image-tools is-small top right show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                                <a rel="nofollow" href="index52ef.html?add-to-cart=390"
-                                                                    data-quantity="1" data-product_id="390"
-                                                                    data-product_sku=""
-                                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                                    style="width:0">
-                                                                    <div class="cart-icon tooltip absolute is-small"
-                                                                        title="Thêm vào giỏ"><strong>+</strong></div>
-                                                                </a>
-                                                            </div>
-                                                        </div><!-- box-image -->
-
-                                                        <div class="box-text box-text-products text-center grid-style-2">
-                                                            <div class="title-wrapper">
-                                                                <p
-                                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                                                    BÀN GHẾ SOFA </p>
-                                                                <p class="name product-title"><a
-                                                                        href="../ghe-sofa-sf33/index.html">Ghế sofa
-                                                                        SF33</a></p>
-                                                            </div>
-                                                            <div class="price-wrapper">
-                                                                <span class="price"><span
-                                                                        class="woocommerce-Price-amount amount">16,752,000&nbsp;<span
-                                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-                                                            </div>
-                                                        </div><!-- box-text -->
-                                                    </div><!-- box -->
-                                                </div><!-- .col-inner -->
-                                            </div><!-- col -->
-
-
-
-                                            <div
-                                                class="product-small col has-hover post-400 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa last instock shipping-taxable purchasable product-type-simple">
-                                                <div class="col-inner">
-
-                                                    <div class="badge-container absolute left top z-1">
+                                                    <div
+                                                        class="image-tools is-small hide-for-small bottom left show-on-hover">
                                                     </div>
-                                                    <div class="product-small box ">
-                                                        <div class="box-image">
-                                                            <div class="image-zoom">
-                                                                <a href="../ghe-sofa-sf108/index.html">
-                                                                    <img width="300" height="300"
-                                                                        src="../../wp-content/uploads/2018/04/9-300x300.jpg"
-                                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                                        alt=""
-                                                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/9-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/9-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/9-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/9-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/9-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/9.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/9-100x100.jpg 100w"
-                                                                        sizes="(max-width: 300px) 100vw, 300px" /> </a>
-                                                            </div>
-                                                            <div class="image-tools is-small top right show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                                <a rel="nofollow" href="indexe590.html?add-to-cart=400"
-                                                                    data-quantity="1" data-product_id="400"
-                                                                    data-product_sku=""
-                                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                                    style="width:0">
-                                                                    <div class="cart-icon tooltip absolute is-small"
-                                                                        title="Thêm vào giỏ"><strong>+</strong></div>
-                                                                </a>
-                                                            </div>
-                                                        </div><!-- box-image -->
-
-                                                        <div class="box-text box-text-products text-center grid-style-2">
-                                                            <div class="title-wrapper">
-                                                                <p
-                                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                                                    BÀN GHẾ SOFA </p>
-                                                                <p class="name product-title"><a
-                                                                        href="../ghe-sofa-sf108/index.html">Ghế sofa
-                                                                        SF108</a></p>
-                                                            </div>
-                                                            <div class="price-wrapper">
-                                                                <span class="price"><span
-                                                                        class="woocommerce-Price-amount amount">13,574,000&nbsp;<span
-                                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-                                                            </div>
-                                                        </div><!-- box-text -->
-                                                    </div><!-- box -->
-                                                </div><!-- .col-inner -->
-                                            </div><!-- col -->
-
-
-
-                                            <div
-                                                class="product-small col has-hover post-398 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa first instock shipping-taxable purchasable product-type-simple">
-                                                <div class="col-inner">
-
-                                                    <div class="badge-container absolute left top z-1">
+                                                    <div
+                                                        class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                                                        <a rel="nofollow" href="{{route('cart.add', $item->id)}}"class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"style="width:0">
+                                                            <div class="cart-icon tooltip absolute is-small"
+                                                                title="Thêm vào giỏ"><strong>+</strong></div>
+                                                        </a>
                                                     </div>
-                                                    <div class="product-small box ">
-                                                        <div class="box-image">
-                                                            <div class="image-zoom">
-                                                                <a href="../ghe-sofa-sf32/index.html">
-                                                                    <img width="300" height="300"
-                                                                        src="../../wp-content/uploads/2018/04/8-2-300x300.jpg"
-                                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                                        alt=""
-                                                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/8-2-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/8-2-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/8-2-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/8-2-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/8-2-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/8-2.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/8-2-100x100.jpg 100w"
-                                                                        sizes="(max-width: 300px) 100vw, 300px" /> </a>
-                                                            </div>
-                                                            <div class="image-tools is-small top right show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                                <a rel="nofollow" href="index7c40.html?add-to-cart=398"
-                                                                    data-quantity="1" data-product_id="398"
-                                                                    data-product_sku=""
-                                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                                    style="width:0">
-                                                                    <div class="cart-icon tooltip absolute is-small"
-                                                                        title="Thêm vào giỏ"><strong>+</strong></div>
-                                                                </a>
-                                                            </div>
-                                                        </div><!-- box-image -->
+                                                </div><!-- box-image -->
 
-                                                        <div class="box-text box-text-products text-center grid-style-2">
-                                                            <div class="title-wrapper">
-                                                                <p
-                                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                                                    BÀN GHẾ SOFA </p>
-                                                                <p class="name product-title"><a
-                                                                        href="../ghe-sofa-sf32/index.html">Ghế sofa
-                                                                        SF32</a></p>
-                                                            </div>
-                                                            <div class="price-wrapper">
-                                                                <span class="price"><span
-                                                                        class="woocommerce-Price-amount amount">15,240,000&nbsp;<span
-                                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-                                                            </div>
-                                                        </div><!-- box-text -->
-                                                    </div><!-- box -->
-                                                </div><!-- .col-inner -->
-                                            </div><!-- col -->
-
-
-
-                                            <div
-                                                class="product-small col has-hover post-387 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa  instock shipping-taxable purchasable product-type-simple">
-                                                <div class="col-inner">
-
-                                                    <div class="badge-container absolute left top z-1">
+                                                <div class="box-text box-text-products text-center grid-style-2">
+                                                    <div class="title-wrapper">
+                                                        <p
+                                                            class="category uppercase is-smaller no-text-overflow product-cat op-7">
+                                                            {{$item->category->name}} </p>
+                                                        <p class="name product-title">
+                                                            <a href="{{route('detail',['id'=>$item->id])}}">{{$item->name}}</a>
+                                                        </p>
                                                     </div>
-                                                    <div class="product-small box ">
-                                                        <div class="box-image">
-                                                            <div class="image-zoom">
-                                                                <a href="../ghe-sofa-sf80/index.html">
-                                                                    <img width="300" height="300"
-                                                                        src="../../wp-content/uploads/2018/04/1-1-300x300.jpg"
-                                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                                        alt=""
-                                                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-1-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-1-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-1-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-1-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-1-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-1.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-1-100x100.jpg 100w"
-                                                                        sizes="(max-width: 300px) 100vw, 300px" /> </a>
-                                                            </div>
-                                                            <div class="image-tools is-small top right show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                                <a rel="nofollow" href="index28e9.html?add-to-cart=387"
-                                                                    data-quantity="1" data-product_id="387"
-                                                                    data-product_sku=""
-                                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                                    style="width:0">
-                                                                    <div class="cart-icon tooltip absolute is-small"
-                                                                        title="Thêm vào giỏ"><strong>+</strong></div>
-                                                                </a>
-                                                            </div>
-                                                        </div><!-- box-image -->
-
-                                                        <div class="box-text box-text-products text-center grid-style-2">
-                                                            <div class="title-wrapper">
-                                                                <p
-                                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                                                    BÀN GHẾ SOFA </p>
-                                                                <p class="name product-title"><a
-                                                                        href="../ghe-sofa-sf80/index.html">Ghế sofa
-                                                                        SF80</a></p>
-                                                            </div>
-                                                            <div class="price-wrapper">
-                                                                <span class="price"><span
-                                                                        class="woocommerce-Price-amount amount">14,250,000&nbsp;<span
-                                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-                                                            </div>
-                                                        </div><!-- box-text -->
-                                                    </div><!-- box -->
-                                                </div><!-- .col-inner -->
-                                            </div><!-- col -->
-
-
-
-                                            <div
-                                                class="product-small col has-hover post-375 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa  instock shipping-taxable purchasable product-type-simple">
-                                                <div class="col-inner">
-
-                                                    <div class="badge-container absolute left top z-1">
+                                                    <div class="price-wrapper">
+                                                        <span class="price"><span
+                                                                class="woocommerce-Price-amount amount">{{number_format($item->price)}}&nbsp;<span
+                                                                    class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
                                                     </div>
-                                                    <div class="product-small box ">
-                                                        <div class="box-image">
-                                                            <div class="image-zoom">
-                                                                <a href="../ghe-sofa-sf31/index.html">
-                                                                    <img width="300" height="300"
-                                                                        src="../../wp-content/uploads/2018/04/2-1-300x300.jpg"
-                                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                                        alt=""
-                                                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/2-1-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/2-1-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/2-1-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/2-1-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/2-1-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/2-1.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/2-1-100x100.jpg 100w"
-                                                                        sizes="(max-width: 300px) 100vw, 300px" /> </a>
-                                                            </div>
-                                                            <div class="image-tools is-small top right show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                                <a rel="nofollow" href="index79b0.html?add-to-cart=375"
-                                                                    data-quantity="1" data-product_id="375"
-                                                                    data-product_sku=""
-                                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                                    style="width:0">
-                                                                    <div class="cart-icon tooltip absolute is-small"
-                                                                        title="Thêm vào giỏ"><strong>+</strong></div>
-                                                                </a>
-                                                            </div>
-                                                        </div><!-- box-image -->
-
-                                                        <div class="box-text box-text-products text-center grid-style-2">
-                                                            <div class="title-wrapper">
-                                                                <p
-                                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                                                    BÀN GHẾ SOFA </p>
-                                                                <p class="name product-title"><a
-                                                                        href="../ghe-sofa-sf31/index.html">Ghế sofa
-                                                                        SF31</a></p>
-                                                            </div>
-                                                            <div class="price-wrapper">
-                                                                <span class="price"><span
-                                                                        class="woocommerce-Price-amount amount">1,528,000&nbsp;<span
-                                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-                                                            </div>
-                                                        </div><!-- box-text -->
-                                                    </div><!-- box -->
-                                                </div><!-- .col-inner -->
-                                            </div><!-- col -->
+                                                </div><!-- box-text -->
+                                            </div><!-- box -->
+                                        </div><!-- .col-inner -->
+                                    </div><!-- col -->
+                                        @endforeach
+                                            
 
 
 
-                                            <div
-                                                class="product-small col has-hover post-365 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa last instock shipping-taxable purchasable product-type-simple">
-                                                <div class="col-inner">
-
-                                                    <div class="badge-container absolute left top z-1">
-                                                    </div>
-                                                    <div class="product-small box ">
-                                                        <div class="box-image">
-                                                            <div class="image-zoom">
-                                                                <a href="../ghe-sofa-sf11/index.html">
-                                                                    <img width="300" height="300"
-                                                                        src="../../wp-content/uploads/2018/04/3-1-300x300.jpg"
-                                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                                        alt=""
-                                                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-1-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-1-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-1-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-1-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-1-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-1.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/3-1-100x100.jpg 100w"
-                                                                        sizes="(max-width: 300px) 100vw, 300px" /> </a>
-                                                            </div>
-                                                            <div class="image-tools is-small top right show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                                <a rel="nofollow" href="indexcd19.html?add-to-cart=365"
-                                                                    data-quantity="1" data-product_id="365"
-                                                                    data-product_sku=""
-                                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                                    style="width:0">
-                                                                    <div class="cart-icon tooltip absolute is-small"
-                                                                        title="Thêm vào giỏ"><strong>+</strong></div>
-                                                                </a>
-                                                            </div>
-                                                        </div><!-- box-image -->
-
-                                                        <div class="box-text box-text-products text-center grid-style-2">
-                                                            <div class="title-wrapper">
-                                                                <p
-                                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                                                    BÀN GHẾ SOFA </p>
-                                                                <p class="name product-title"><a
-                                                                        href="../ghe-sofa-sf11/index.html">Ghế sofa
-                                                                        SF11</a></p>
-                                                            </div>
-                                                            <div class="price-wrapper">
-                                                                <span class="price"><span
-                                                                        class="woocommerce-Price-amount amount">12,080,000&nbsp;<span
-                                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-                                                            </div>
-                                                        </div><!-- box-text -->
-                                                    </div><!-- box -->
-                                                </div><!-- .col-inner -->
-                                            </div><!-- col -->
-
-
-
-                                            <div
-                                                class="product-small col has-hover post-373 product type-product status-publish has-post-thumbnail product_cat-ban-ghe-sofa first instock shipping-taxable purchasable product-type-simple">
-                                                <div class="col-inner">
-
-                                                    <div class="badge-container absolute left top z-1">
-                                                    </div>
-                                                    <div class="product-small box ">
-                                                        <div class="box-image">
-                                                            <div class="image-zoom">
-                                                                <a href="../ghe-sofa-sf23/index.html">
-                                                                    <img width="300" height="300"
-                                                                        src="../../wp-content/uploads/2018/04/4-1-300x300.jpg"
-                                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
-                                                                        alt=""
-                                                                        srcset="//mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-1-300x300.jpg 300w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-1-150x150.jpg 150w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-1-24x24.jpg 24w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-1-36x36.jpg 36w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-1-48x48.jpg 48w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-1.jpg 600w, //mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/4-1-100x100.jpg 100w"
-                                                                        sizes="(max-width: 300px) 100vw, 300px" /> </a>
-                                                            </div>
-                                                            <div class="image-tools is-small top right show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                                            </div>
-                                                            <div
-                                                                class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                                <a rel="nofollow" href="index57f7.html?add-to-cart=373"
-                                                                    data-quantity="1" data-product_id="373"
-                                                                    data-product_sku=""
-                                                                    class="ajax_add_to_cart add_to_cart_button add-to-cart-grid"
-                                                                    style="width:0">
-                                                                    <div class="cart-icon tooltip absolute is-small"
-                                                                        title="Thêm vào giỏ"><strong>+</strong></div>
-                                                                </a>
-                                                            </div>
-                                                        </div><!-- box-image -->
-
-                                                        <div class="box-text box-text-products text-center grid-style-2">
-                                                            <div class="title-wrapper">
-                                                                <p
-                                                                    class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                                                    BÀN GHẾ SOFA </p>
-                                                                <p class="name product-title"><a
-                                                                        href="../ghe-sofa-sf23/index.html">Ghế sofa
-                                                                        SF23</a></p>
-                                                            </div>
-                                                            <div class="price-wrapper">
-                                                                <span class="price"><span
-                                                                        class="woocommerce-Price-amount amount">16,587,000&nbsp;<span
-                                                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-                                                            </div>
-                                                        </div><!-- box-text -->
-                                                    </div><!-- box -->
-                                                </div><!-- .col-inner -->
-                                            </div><!-- col -->
+                                            
 
 
                                         </div>

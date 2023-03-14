@@ -1,12 +1,15 @@
 <?php
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Ordercontroller;
+use App\Http\Controllers\OrderManagerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.pay');
+    return view('layout.home');
 });
 //view fe
 Route::get('home', [LayoutController::class, 'home'])->name('home');
@@ -30,7 +33,7 @@ Route::get('contact',[LayoutController::class, 'contact'])->name('contact');
 Route::get('detail/{id}',[LayoutController::class,'detail'])->name('detail');
 Route::get('/product/{slug}',[LayoutController::class,'category'])->name('category');
 Route::get('news',[LayoutController::class,'news'])->name('news');
-Route::get('pay',[LayoutController::class,'pay'])->name('pay');
+
 
 
 // đăng nhập admin
@@ -42,14 +45,20 @@ Route::post('/admin',[LoginController::class,'store'])->name('login.store');
   Route::get('/admin/home',[AdminController::class,'index'])->name('admin.home');
   Route::resource('admin/home/category', CategoryController::class);
   Route::resource('admin/home/product', ProductController::class);
-  Route::resource('admin/home/blog', BlogController::class);
+  Route::resource('admin/home/cart', Ordercontroller::class);
+  Route::resource('admin/home/cart/list-detail',OrderManagerController::class);
+  Route::resource('admin/home/user', UserController::class);
+  Route::resource('admin/home/role', RoleController::class);
 });
 //CART
 Route::group(['prefix' => 'cart'], function() {
 
   Route::get('', [CartController::class, 'view'])->name('cart.view');
+  Route::get('checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+  Route::post('checkout', [CartController::class, 'postCheckout']);
   Route::get('add/{product}', [CartController::class, 'add'])->name('cart.add');
   Route::get('remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
   Route::get('update/{id}', [CartController::class, 'update'])->name('cart.update');
     Route::get('clear', [CartController::class, 'clear'])->name('cart.clear');
+
 });
