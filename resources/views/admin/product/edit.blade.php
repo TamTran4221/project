@@ -1,4 +1,5 @@
 @extends('main')
+@section('title','Chỉnh sửa sản phẩm')
 @section('noidung')
 <?php //Hiển thị thông báo thành công?>
 @if ( Session::has('success') )
@@ -24,62 +25,56 @@
 
 <?php //Hiển thị form sửa sản phẩm?>
 @include('alert')
-<div class="card-body">
-    <form method="POST" action="{{route('product.update',$product)}}" enctype= "multipart/form-data">
-        @csrf
-        @method('PUT')
-        <div class="input-group mb-3">
-            <label for="" class="">Name</label>
-        </div>
-        <div class="input-group mb-3">
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <div class="container-fluid py-4">
+        <div class="row min-vh-80">
+            <div class="col-lg-8 col-md-10 col-12 m-auto">
+                <h3 class="mt-3 mb-0 text-center">CHỈNH SỬA SẢN PHẨM</h3>
+                <p class="lead font-weight-normal opacity-8 mb-7 text-center">
+                </p>
+                <div class="card">
+                    <div class="card-body">
+                        <form method="POST" action="{{route('product.update',$product)}}" enctype= "multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                            <div class="input-group input-group-static mb-4">
+                                <label>Tên sản phẩm</label>
+                                <input type="name" value="{{$product->name}}" name="name" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="" class="">Giá sản phẩm *</label>
+                                <input type="text" class="form-control" value="{{$product->price}}" name="price">
+                                <span class="input-group-text">VND</span>
+                            </div>
+                            
+                            <div class="input-group input-group-static mb-4">
+                                <label for="" class="">Ảnh *</label>
+                                <input type="file" name="file" class="form-control">
+                                <img src="{{url('uploads')}}/{{$product->image}}" alt="" width="100px">
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="" class="">Danh mục *</label>
+                                <select class="form-control" name="category_id" id="">
+                                    @foreach($cate as $value)
+                                        <option value="{{$value->id}}" {{$value->id == $product->category_id ? 'selected' : ''}}>
+                                            {{$value->name}}</option>
+                                    @endforeach
+                                  </select>
 
-            <input type="name" value="{{$product->name}}" name="name" class="form-control">
-        </div>
-        <div class="input-group mb-3">
-            <label for="" class="">Price</label>
-        </div>
+                            </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">VND</span>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="" class="">Mô tả sản phẩm *</label>
+                                <textarea class="form-control" name="description" id="" cols="30" rows="15" value="{{$product->description }}">{{$product->description }}</textarea>
+                            </div>
+                            <span class="input-group-append mt-3">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </span>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <input type="text" class="form-control" value="{{$product->price}}" name="price">
-            
         </div>
-        <div class="input-group mb-3">
-            <label for="" class="">image</label>
-        </div>
-
-        <div class="input-group mb-3">
-            <input type="file" name="file" class="form-control">
-            <img src="{{url('uploads')}}/{{$product->image}}" alt="" width="100px">
-        </div>
-        <div class="input-group mb-3">
-            <label for="" class="">Category</label>
-        </div>
-
-        <div class="input-group">
-
-
-            <select class="form-control" name="category_id" id="">
-                @foreach($cate as $value)
-                    <option value="{{$value->id}}" {{$value->id == $product->category_id ? 'selected' : ''}}>
-                        {{$value->name}}</option>
-                @endforeach
-              </select>
-        </div>
-
-        <!-- /input-group -->
-
-        <div class="input-group mb-3">
-            <label for="" class="">Description</label>
-        </div>
-        <div class="input-group input-group-sm">
-            <textarea class="form-control" name="description" id="" cols="30" rows="15" value="{{$product->description }}">{{$product->description }}</textarea>
-
-        </div> <span class="input-group-append">
-            <button  class="btn btn-info btn-flat">Go!</button>
-        </span>
-    </form>
-</div>
+    </div>
+</main>>
 @endsection

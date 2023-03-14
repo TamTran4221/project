@@ -127,7 +127,6 @@
     <script src="{{url('template/admin')}}/assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="{{url('template/admin')}}/assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="{{url('template/admin')}}/assets/js/plugins/choices.min.js"></script>
-
     <script src="{{url('template/admin')}}/assets/js/plugins/dragula/dragula.min.js"></script>
     <script src="{{url('template/admin')}}/assets/js/plugins/jkanban/jkanban.js"></script>
     <script src="{{url('template/admin')}}/assets/js/plugins/countup.min.js"></script>
@@ -380,6 +379,7 @@
         integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
         data-cf-beacon='{"rayId":"7a7b1ec8cc5b6e49","version":"2023.2.0","r":1,"token":"1b7cbb72744b40c580f8633c6b62637e","si":100}'
         crossorigin="anonymous"></script>
+        
 </body>
 
 </html>

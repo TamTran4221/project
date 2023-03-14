@@ -1,4 +1,5 @@
 @extends('main')
+@section('title','Danh sách sản phẩm')
 @section('noidung')
     <?php //Hiển thị thông báo thành công
     ?>
