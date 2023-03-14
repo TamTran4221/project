@@ -54,20 +54,20 @@
                             <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false"
                                 href="#usersExample">
                                 <span class="sidenav-mini-icon"> U </span>
-                                <span class="sidenav-normal  ms-2  ps-1"> Người dùng <b class="caret"></b></span>
+                                <span class="sidenav-normal  ms-2  ps-1"> người dùng và <br> người quàn trị <b class="caret"></b></span>
                             </a>
                             <div class="collapse " id="usersExample">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link text-white " href="">
+                                        <a class="nav-link text-white " href="{{ route('user.create') }}">
                                             <span class="sidenav-mini-icon"> A </span>
-                                            <span class="sidenav-normal  ms-2  ps-1"> Thêm mới người dùng </span>
+                                            <span class="sidenav-normal  ms-2  ps-1"> Thêm mới người dùng và <br>  người quàn trị </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white " href="">
+                                        <a class="nav-link text-white " href="{{ route('user.index') }}">
                                             <span class="sidenav-mini-icon"> L </span>
-                                            <span class="sidenav-normal  ms-2  ps-1"> Danh sách người dùng </span>
+                                            <span class="sidenav-normal  ms-2  ps-1"> Danh sách người dùng và <br>  người quàn trị </span>
                                         </a>
                                     </li>
                                 </ul>

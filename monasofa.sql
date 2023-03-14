@@ -242,6 +242,7 @@ CREATE TABLE `users` (
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
+  `status` bigint(20) UNSIGNED NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -250,9 +251,9 @@ CREATE TABLE `users` (
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$D2TG692ISo2lQzVT/DDlaeUolVAXTMRKmRP5n.R41KGzEXF4D6SXG', NULL, NULL, NULL),
-(6, 'nga', 'ngan@gmail.com', NULL, '$2y$10$a.Z7oxLtA57XZXUUrtKC9eRgXcH.nzzt74SIIii5HbjofhB7hPk9W', NULL, '2023-03-14 00:25:54', '2023-03-14 00:25:54');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$D2TG692ISo2lQzVT/DDlaeUolVAXTMRKmRP5n.R41KGzEXF4D6SXG', NULL, 1, NULL, NULL),
+(6, 'nga', 'ngan@gmail.com', NULL, '$2y$10$a.Z7oxLtA57XZXUUrtKC9eRgXcH.nzzt74SIIii5HbjofhB7hPk9W', NULL, 2, '2023-03-14 00:25:54', '2023-03-14 00:25:54');
 
 --
 -- Chỉ mục cho các bảng đã đổ

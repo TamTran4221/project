@@ -48,11 +48,10 @@ Route::post('/admin',[LoginController::class,'store'])->name('login.store');
   Route::resource('admin/home/cart', Ordercontroller::class);
   Route::resource('admin/home/cart/list-detail',OrderManagerController::class);
   Route::resource('admin/home/user', UserController::class);
-  Route::resource('admin/home/role', RoleController::class);
 });
+
 //CART
 Route::group(['prefix' => 'cart'], function() {
-
   Route::get('', [CartController::class, 'view'])->name('cart.view');
   Route::get('checkout', [CartController::class, 'checkout'])->name('cart.checkout');
   Route::post('checkout', [CartController::class, 'postCheckout']);
