@@ -25,20 +25,13 @@
 <?php //Form thêm mớisản phẩm?>
     <div class="card-body">
         <div class="tab-description p-0">
-
-            <form action="{{route('admin.user.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('user.store')}}" method="POST">
                 @csrf
                 <div class="input-group mb-3">
                     <label for="" class="">Tên tài khoản *</label>
                 </div>
                 <div class="input-group mb-3">
                     <input type="name" placeholder="Tên tài khoản..." name="name" class="form-control">
-                </div>
-                <div class="input-group mb-3">
-                    <label for="" class="">Ảnh đại diện *</label>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="file" name="file" class="form-control">
                 </div>
                 <div class="input-group mb-3">
                     <label for="" class="">Tài khoản*</label>
@@ -56,14 +49,19 @@
                     <label for="" class="">Quyền của tài khoản *</label>
                 </div>
                 <div class="input-group mb-3">
-                    <select class="form-control" name="role_id" id="">
-                        @foreach($roles as $value)
-                            <option value="{{$value->id}}">{{$value->name}}</option>
-                        @endforeach
-                      </select>
+                    <select class="form-control" name="status" id="">
+                        <option value="1" selected>
+                            Người quản trị
+                        </option>
+                        <option value="2">
+                            Người dùng
+                        </option>
+                    </select>
                 </div>
+                <span class="input-group-append mt-3">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </span>
             </form>
         </div>
     </div>
-
 @endsection
