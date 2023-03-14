@@ -25,15 +25,15 @@
 <?php //Hiển thị form sửa sản phẩm?>
 @include('alert')
 <div class="card-body">
-    <form method="POST" action="{{route('cart.update',$order)}}" enctype= "multipart/form-data">
+    <form method="POST" action="{{route('order.update',$order)}}" enctype= "multipart/form-data">
         @csrf
         @method('PUT')
         <div class="input-group mb-3">
             <label for="" class="">Tên khách hàng</label>
         </div>
         <div class="input-group mb-3">
-
-            <input type="name" value="{{$order->user->name}}" name="user_id" class="form-control">
+            <span>{{$order->user->name}}</span>
+            <input type="hidden" value="{{$order->user_id}}" name="user_id" class="form-control">
         </div>
         <div class="input-group mb-3">
             <label for="" class="">Địa chỉ</label>
@@ -64,17 +64,17 @@
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="status" id="" value="0"{{$order->status == 1 ? 'checked': ''}}> Đang giao hàng
+                    <input class="form-check-input" type="radio" name="status" id="" value="1"{{$order->status == 1 ? 'checked': ''}}> Đang giao hàng
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="status" id="" value="0"{{$order->status == 2 ? 'checked': ''}}> Đã giao hàng
+                    <input class="form-check-input" type="radio" name="status" id="" value="2"{{$order->status == 2 ? 'checked': ''}}> Đã giao hàng
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="status" id="" value="0"{{$order->status ? 'checked': ''}}> Đã hủy
+                    <input class="form-check-input" type="radio" name="status" id="" value="3"{{$order->status == 3 ? 'checked': ''}}> Đã hủy
                 </label>
             </div>
         </div>

@@ -75,7 +75,7 @@ class OrderController extends Controller
     {
         $order = Order::find($id);
         $order->update($request->all());
-        return redirect()->route('cart.index')->with('success','Đã cập nhật');
+        return redirect()->route('order.index')->with('success','Đã cập nhật');
     }
 
     /**

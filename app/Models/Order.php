@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Order extends Model
 {
@@ -18,7 +19,10 @@ class Order extends Model
     public function scopeSearch($query)
      {
         if ($key = request()->key) {
-            $query =$query ->where('name','like','%'.$key.'%');
+            $users = User::where('name','like','%'.$key.'%')->get();
+            foreach ($users as  $value) {
+                $query = $query ->where('user_id','=',$value->id);
+            }
         }
         return $query;
      }
