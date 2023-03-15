@@ -8,7 +8,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Ordercontroller;
 use App\Http\Controllers\OrderManagerController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,8 +44,8 @@ Route::post('/admin',[LoginController::class,'store'])->name('login.store');
   Route::get('/admin/home',[AdminController::class,'index'])->name('admin.home');
   Route::resource('admin/home/category', CategoryController::class);
   Route::resource('admin/home/product', ProductController::class);
-  Route::resource('admin/home/cart', Ordercontroller::class);
-  Route::resource('admin/home/cart/list-detail',OrderManagerController::class);
+  Route::resource('admin/home/order', Ordercontroller::class);
+  Route::resource('admin/home/cart/list/detail',OrderManagerController::class);
   Route::resource('admin/home/user', UserController::class);
 });
 

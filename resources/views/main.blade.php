@@ -106,7 +106,7 @@
                             <div class="collapse " id="projectsExample">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link text-white " href="{{ route('cart.index') }}">
+                                        <a class="nav-link text-white " href="{{ route('order.index') }}">
                                             <span class="sidenav-mini-icon"> L </span>
                                             <span class="sidenav-normal  ms-2  ps-1"> Danh sách đơn hàng </span>
                                         </a>
