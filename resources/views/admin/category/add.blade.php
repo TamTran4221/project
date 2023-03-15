@@ -1,38 +1,51 @@
 @extends('main')
+@section('title','Thêm mới dnah mục')
 @section('noidung')
-    <div class="container" style="margin: 50px">
-        <div class="row">
-        
-        <form method="POST" action="{{route('category.store')}}">
-            @csrf
-            <div class="form-group">
-                <label for="exampleInputEmail1">Tên danh mục</label>
-                <input type="text" class="form-control" id="name" name="name" onkeyup="ChangeToSlug();">
-                
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Tên đường dẫn</label>
-                <input type="text" class="form-control" id="slug" name="slug">
-                
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Trạng thái</label>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="status" id="" value="0"> Ẩn
-                    </label>
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <div class="container-fluid py-4">
+        <div class="row min-vh-80">
+            <div class="col-lg-8 col-md-10 col-12 m-auto">
+                <h3 class="mt-3 mb-0 text-center">THÊM MỚI DANH MỤC</h3>
+                <p class="lead font-weight-normal opacity-8 mb-7 text-center">
+                </p>
+                <div class="card">
+                    <div class="card-body">
+                        <form action="{{ route('category.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+
+                            <div class="input-group input-group-static mb-4">
+                                <label for="exampleInputEmail1">Tên danh mục</label>
+                                <input type="text" class="form-control" id="name" name="name" onkeyup="ChangeToSlug();">
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="exampleInputEmail1">Tên đường dẫn</label>
+                                <input type="text" class="form-control" id="slug" name="slug">
+                            </div>
+                            
+                            <div class="input-group input-group-static mb-4">
+                                <label for="exampleInputPassword1">Trạng thái</label>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="status" id="" value="0"> Ẩn
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="status" id="" value="1" checked> Hiện
+                                    </label>
+                                </div>
+                            </div>
+                        
+                            <span class="input-group-append mt-3">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </span>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="status" id="" value="1" checked> Hiện
-                    </label>
-                </div>
             </div>
-          
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
         </div>
     </div>
+</main>
 @stop
 <script>
     function ChangeToSlug()

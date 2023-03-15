@@ -44,7 +44,7 @@
                             <div class="ms-auto my-auto mt-lg-0 mt-4">
                                 <div class="ms-auto my-auto">
                                     <a href="{{ route('product.create') }}" class="btn bg-gradient-primary btn-sm mb-0"
-                                        target="_blank">+&nbsp; New Product</a>
+                                        target="_blank">+&nbsp; Thêm mới dản phẩm</a>
 
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
 
                                                             <img class="w-10 ms-3"
                                                                 src="{{ url('uploads') }}/{{ $item->image }}"
-                                                                alt="hoodie">
+                                                                alt="">
                                                             <h6 class="ms-3 my-auto">{{ $item->name }}</h6>
                                                         </div>
                                                     </td>
