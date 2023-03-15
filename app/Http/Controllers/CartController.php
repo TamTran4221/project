@@ -65,8 +65,6 @@ class CartController extends Controller
                 if ($list_user->email == $request->email) {
                     $check = true;
                     $user_id = $list_user->id;
-                } else {
-                    $check = false;
                 }
             }
             if ($check == false) {
