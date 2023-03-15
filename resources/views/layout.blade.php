@@ -752,7 +752,7 @@
                                                 <div class="flex-row relative">
                                                     <div class="flex-col flex-grow">
                                                         <input type="search" class="search-field mb-0"
-                                                            name="s" value=""
+                                                            name="key" value=""
                                                             placeholder="Tìm kiếm&hellip;" />
                                                         <input type="hidden" name="post_type" value="product" />
                                                     </div><!-- .flex-col -->
@@ -1145,17 +1145,17 @@
         <div class="account-container lightbox-inner">
             <div class="account-login-inner">
                 <h3 class="uppercase">Đăng nhập</h3>
-                <form class="woocommerce-form woocommerce-form-login login" method="POST">
+                <form class="woocommerce-form woocommerce-form-login login" method="post">
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                         <label for="username">Tên tài khoản hoặc địa chỉ email <span
                                 class="required">*</span></label>
                         <input type="text" class="woocommerce-Input woocommerce-Input--text input-text"
-                            name="" id="username" value="" />
+                            name="email" id="username" value="" />
                     </p>
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                         <label for="">Mật khẩu <span class="required">*</span></label>
                         <input class="woocommerce-Input woocommerce-Input--text input-text" type="password"
-                            name="" id="password" />
+                            name="password" id="password" />
                     </p>
                     <p class="form-row">
                         <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce"

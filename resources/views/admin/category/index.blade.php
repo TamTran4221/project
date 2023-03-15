@@ -1,5 +1,5 @@
 @extends('main')
-@section('title','Danh sách sản phẩm')
+@section('title', 'Danh sách sản phẩm')
 @section('noidung')
     <?php //Hiển thị thông báo thành công
     ?>
@@ -30,76 +30,60 @@
     ?>
     <!-- Left col -->
 
-    <div class="container-fluid py-4">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header pb-0">
-                        <div class="d-lg-flex">
-                            <div>
-                                <h5 class="mb-0">Tất cả dản phẩm</h5>
-
-                            </div>
-                            <div class="ms-auto my-auto mt-lg-0 mt-4">
-                                <div class="ms-auto my-auto">
-                                    <a href="{{ route('product.create') }}" class="btn bg-gradient-primary btn-sm mb-0"
-                                        target="_blank">+&nbsp; Thêm mới danh mục</a>
-
-                                </div>
-                            </div>
+    <div class="container" style="margin: 50px">
+        <div>
+            <div class="search"
+                style="display: flex;flex-direction: row-reverse;align-items: center;justify-content: space-between;">
+                <form action="">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-lg" placeholder="Nhập từ khóa tìm kiếm"
+                            name="key">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-lg btn-default">
+                                <i class="fa fa-search"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="card-body px-0 pb-0">
-                        <div class="table-responsive">
-                            <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
-                                <div class="dataTable-top">
-                                    <div class="dataTable-search"><input name="key" class="dataTable-input"
-                                            placeholder="Search..." type="text"></div>
-                                </div>
-                                <div class="dataTable-container">
-                                    <table class="table table-flush dataTable-table" id="products-list">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th data-sortable=""><a href="#" class="dataTable-sorter">Tên danh mục </a>
-                                                </th>
-                                                <th data-sortable="" style="width: 11.747%;"><a href="#"
-                                                        class="dataTable-sorter">Tên đường dẫn</a></th>
-                                                <th data-sortable="" style="width: 9.03614%;"><a href="#"
-                                                        class="dataTable-sorter">Trạng thái</a></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($cates as $item)
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <h6 class="ms-3 my-auto">{{ $item->name }}</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-sm">{{ $item->slug }}</td>
-                                                    <td class="text-sm">{{ $item->status }}</td>
-                                                    <td class="text-sm">
-                                                        <a href="{{ route('category.edit', $item) }}" class="btn btn-primary">Edit</a>
-                                                        <form action="{{ route('category.destroy', $item) }}" method="POST"
-                                                            onsubmit="return confirm('Bạn thực sự muốn xóa sản phẩm này?')">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit" class="btn btn-danger">DELETE</button>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-
-                                        </tbody>
-
-                                    </table>
-                                </div>
-                                {{ $cates->links() }}
-                            </div>
-                        </div>
-                    </div>
+                </form>
+                <div class="add">
+                    <a href="{{ route('category.create') }}" class="btn btn-success" style="margin: 20px">Thêm mới</a>
                 </div>
             </div>
+            <div class="col-lg-10">
+                <table class="table" style="text-align: center">
+                    <thead class="thead-dark">
+                        <tr>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên danh mục</th>
+                            <th>Trạng thái</th>
+                            <th></th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($cates as $data)
+                            <tr>
+                                <td scope="row">{{ $loop->iteration }}</td>
+                                <td>{{ $data->name }}</td>
+                                <td>{{ $data->status ? 'Hiện' : 'Ẩn' }}</td>
+                                <td>
+                                    <a href="{{ route('category.edit', $data) }}" class="btn btn-primary">Sửa</a>
+
+                                    <form action="{{ route('category.destroy', $data) }}" method="POST">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger">Xóa</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
+                {{ $cates->links() }}
+            </div>
+
         </div>
     </div>
 @endsection

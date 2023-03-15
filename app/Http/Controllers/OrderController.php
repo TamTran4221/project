@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 
 use App\Models\Order;
+use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -60,7 +61,6 @@ class OrderController extends Controller
     public function edit($id)
     {
         $order = Order::find($id);
-
         return view('admin.cart.edit',compact('order'),['title'=> 'Chỉnh sửa danh mục']);
     }
 
@@ -84,5 +84,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    
+    public function destroy($id)
+    {
+        $order = Order::find($id)->delete();
+        return redirect()->back()->with('success','Xóa thành công');
+    }
 }

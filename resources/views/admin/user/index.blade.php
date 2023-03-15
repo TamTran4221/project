@@ -48,11 +48,13 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $value->name }}</td>
                                         <td>{{ $value->email }}</td>
-                                        <td><?php if ($value->status == 1) {
-                                               echo 'Người quản trị';
-                                            } else if ($value->status == 2) {
-                                                echo 'Khách Hàng';
-                                            }?>
+                                        <td>
+                                            @if ($value->status == 0)
+                                            <span>Người quản trị</span>
+                                        @elseif($value->status == 1)
+                                        <span>Khách hàng</span>
+                                        @endif
+                                            
                                        </td>
                                         <td>{{ $value->created_at }}</td>
                                         <td>{{ $value->updated_at }}</td>
@@ -61,7 +63,7 @@
                                         </td>
                                         <td>
                                             <form action="{{ route('user.destroy', $value) }}" method="POST"
-                                                onsubmit="return confirm('Bạn thực sự muốn xóa sản phẩm này?')">
+                                                onsubmit="return confirm('Bạn thực sự muốn xóa người dùng này?')">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">DELETE</button>

@@ -86,7 +86,6 @@ class CartController extends Controller
                 "user_id"=>$user_id,
                 'note'=>$request->note,
            ]);
-             {
                 foreach($cart->items as $item) {
                     $detail_data = [
                         'order_id' => $order->id,
@@ -99,8 +98,6 @@ class CartController extends Controller
     
                 session(['cart' => null]);
                 return redirect()->route('home')->with('success','Đặt hàng thành công');
-            }
-            return redirect()->back()->with('errorr','đặt hàng thất bại');
         } catch (\Throwable $th) {
             dd($th);
         }

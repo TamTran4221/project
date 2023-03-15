@@ -45,5 +45,4 @@ class LayoutController extends Controller
         $ramdomProducts = Product::inRandomOrder()->limit(6)->get();
         return view('layout.category', compact('product','ramdomProducts'));
     }
-    
 }

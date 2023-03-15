@@ -18,6 +18,7 @@ return new class extends Migration
             $table->bigInteger('product_id')->unsigned();
             $table->foreign('order_id')->references('id')->on('orders');
             $table->foreign('product_id')->references('id')->on('products');
+            $table->primary(['order_id','product_id']);
             $table->decimal('price',10)->unsigned();
             $table->integer('quantity')->unsigned()->default(1);
             $table->decimal('subtotal', 12)->storedAs('price * quantity');
