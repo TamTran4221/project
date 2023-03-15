@@ -48,10 +48,10 @@
                             <div class="input-group input-group-static mb-4">
                                 <label for="" class="">Quyền</label>
                                 <select class="form-control" name="status" id="">
-                                        <option value="1" {{$user->status == 0 ? 'selected' : ''}}>
+                                        <option value="0" {{$user->status == 0 ? 'selected' : ''}}>
                                             Người quản trị
                                         </option>
-                                        <option value="2" {{$user->status == 1 ? 'selected' : ''}}>
+                                        <option value="1" {{$user->status == 1 ? 'selected' : ''}}>
                                             Người dùng
                                         </option>
                                   </select>
