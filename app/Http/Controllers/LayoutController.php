@@ -14,7 +14,6 @@ class LayoutController extends Controller
 {
     public function home()
     {
-
        $product = Product::where('category_id',2)->limit(8)->get();
        $products = Product::where('category_id',3)->get();
        $pro = Product::where('category_id',1)->limit(8)->get();

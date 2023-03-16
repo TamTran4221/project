@@ -1,6 +1,7 @@
 @extends('main')
 @section('title', 'Chi tiết đơn hàng')
 @section('noidung')
+
     <section class="col-lg-12 connectedSortable">
         <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky"
             id="navbarBlur" data-scroll="true">
@@ -73,7 +74,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php $totalOrder = 0 ?>
                                             @foreach ($detail as $item)
+                                            <?php $totalOrder += $item->subtotal ?>
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex px-2">
@@ -318,12 +321,13 @@
                                         </span>
 
                                     </div>
+                                  
                                     <div class="d-flex justify-content-between mt-4">
                                         <span class="mb-2 text-lg">
-                                            Tổng cộng:
+                                            Tổng :
                                         </span>
                                         <strong><span
-                                            class="woocommerce-Price-amount amount">{{ number_format($cart->totalAmount) }}&nbsp;<span
+                                            class="woocommerce-Price-amount amount">{{number_format($totalOrder)}}&nbsp;<span
                                                 class="woocommerce-Price-currencySymbol">₫</span></span></strong>
                                     </div>
                                 </div>

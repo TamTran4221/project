@@ -1146,6 +1146,7 @@
             <div class="account-login-inner">
                 <h3 class="uppercase">Đăng nhập</h3>
                 <form class="woocommerce-form woocommerce-form-login login" method="post">
+                    @csrf
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                         <label for="username">Tên tài khoản hoặc địa chỉ email <span
                                 class="required">*</span></label>

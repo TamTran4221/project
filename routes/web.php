@@ -27,6 +27,7 @@ Route::get('/', function () {
 });
 //view fe
 Route::get('home', [LayoutController::class, 'home'])->name('home');
+Route::post('home', [LayoutController::class, 'home'])->name('home');
 Route::get('about',[LayoutController::class, 'about'])->name('about');
 Route::get('contact',[LayoutController::class, 'contact'])->name('contact');
 Route::get('detail/{id}',[LayoutController::class,'detail'])->name('detail');
