@@ -55,7 +55,7 @@ class CartController extends Controller
     public function postCheckout(Request $request, Cart $cart)
     {
         //kiểm tra nếu chưa đăng nhập thì tạo bản ghi mới vào user
-        if ((Auth::check()) && (Auth::user()->status == 2)) {
+        if ((Auth::check()) && (Auth::user()->status == 1)) {
             $user_id = Auth::user()->id;
         } else {
             $object_user = new User();
@@ -72,7 +72,7 @@ class CartController extends Controller
                     'name'=> $request->name,
                     'email'=>$request->email,
                     'password'=>Hash::make('123456'),
-                    'status'=> '2'
+                    'status'=> '1'
                 ]);
                 $user_id = $user->id;
             }
