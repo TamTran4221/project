@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('address',255);
             $table->string('phone',20);
-            $table->text('note');
+            $table->text('note')->nullable();
             $table->tinyInteger('status')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');

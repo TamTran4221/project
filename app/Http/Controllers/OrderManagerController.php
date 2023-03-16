@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,7 @@ class OrderManagerController extends Controller
      */
     public function index()
     {
-        $order_detail = OrderDetail::orderBy('created_at', 'DESC')->paginate(10);
-        return view('admin.cart.list',['title'=>'Chi tiết đơn hàng'],compact('order_detail'));
+      
     }
 
     /**
@@ -47,7 +47,9 @@ class OrderManagerController extends Controller
      */
     public function show($id)
     {
-        //
+        $orders = Order::find($id);
+        $detail = OrderDetail::where('order_id',$id)->get();
+        return view('admin.cart.detail',compact('orders','detail'));
     }
 
     /**

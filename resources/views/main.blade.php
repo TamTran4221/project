@@ -77,7 +77,7 @@
                             <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false"
                                 href="#accountExample">
                                 <span class="sidenav-mini-icon"> P </span>
-                                <span class="sidenav-normal  ms-2  ps-1"> Quản lý dản phẩm <b class="caret"></b></span>
+                                <span class="sidenav-normal  ms-2  ps-1"> Quản lý sản phẩm <b class="caret"></b></span>
                             </a>
                             <div class="collapse " id="accountExample">
                                 <ul class="nav nav-sm flex-column">

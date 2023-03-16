@@ -7,6 +7,8 @@ use App\Models\Order;
 use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 
+use function Ramsey\Uuid\v1;
+
 class OrderController extends Controller
 {
     /**
@@ -16,7 +18,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $order = Order::search()->orderBy('created_at', 'DESC')->paginate(10);
+        $order = Order::search()->orderBy('created_at', 'DESC')->paginate(8);
         return view('admin.cart.index',['title'=> 'Danh sách đơn đặt hàng'],compact('order'));
     }
 

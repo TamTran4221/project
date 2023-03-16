@@ -28,9 +28,6 @@
     <?php //Hiển thị danh sách sản phẩm
     ?>
     <!-- Left col -->
-
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ps ps--active-y">
-
         <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 border-radius-xl z-index-sticky shadow-none"
             id="navbarBlur" data-scroll="true">
             <div class="container-fluid py-1 px-3">
@@ -108,13 +105,15 @@
                                                 </td>
                                                 <td class="text-xs font-weight-normal">
                                                     @if ($item->status == 0)
-                                                    <span>Chờ duyệt</span>
+                                                    <span>Đơn hàng đã nhận</span>
                                                 @elseif($item->status == 1)
-                                                <span>Đang giao hàng</span>
+                                                <span>Đang chuẩn bị</span>
                                                 @elseif($item->status == 2)
-                                                <span>Đã giao hàng</span>
+                                                <span>Đã giao cho đơn vị vận chuyển</span>
+                                                @elseif($item->status == 3)
+                                                <span>Đang vận chuyển</span>
                                                 @else 
-                                                <span>Đã hủy</span>
+                                                <span>Đã giao hàng</span>
                                                 @endif
                                                 </td>
                                                 <td class="text-xs font-weight-normal">
@@ -129,16 +128,16 @@
                                                     <span class="my-2 text-xs">{{$item->note}}</span>
                                                 </td>
                                                 <td>
-                                                    <a href="{{route('detail.index')}}" class="btn btn-sm btn-danger">Chi tiết đơn hàng</a>
+                                                    <a href="{{route('order.detail',$item->id)}}" class="btn btn-sm btn-danger">Chi tiết đơn hàng</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{route('order.destroy',$item)}}" class="btn btn-primary">Xóa</a>
+                                                    <a href="{{route('order.edit',$item)}}" class="btn btn-primary">Sửa</a>
                                                 </td>
                                             </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
-                                  
+                                    {{$order->links()}}
                                 </div>
                             </div>
                         </div>
@@ -146,12 +145,4 @@
                 </div>
             </div>
         </div>
-        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-        </div>
-        <div class="ps__rail-y" style="top: 0px; height: 937px; right: 0px;">
-            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 795px;"></div>
-        </div>
-        {{$order->links()}}
-    </main>
 @endsection

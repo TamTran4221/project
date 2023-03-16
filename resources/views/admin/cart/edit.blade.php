@@ -59,22 +59,27 @@
         <div class="input-group">
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="status" id="" value="0"{{$order->status == 0 ? 'checked': ''}}> Chờ duyệt
+                    <input class="form-check-input" type="radio" name="status" id="" value="0"{{$order->status == 0 ? 'checked': ''}}> Đơn hàng đã nhận
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="status" id="" value="1"{{$order->status == 1 ? 'checked': ''}}> Đang giao hàng
+                    <input class="form-check-input" type="radio" name="status" id="" value="1"{{$order->status == 1 ? 'checked': ''}}> Tạo đơn hàng
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="status" id="" value="2"{{$order->status == 2 ? 'checked': ''}}> Đã giao hàng
+                    <input class="form-check-input" type="radio" name="status" id="" value="2"{{$order->status == 2 ? 'checked': ''}}> Đã giao cho đơn vị vận chuyển
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="status" id="" value="3"{{$order->status == 3 ? 'checked': ''}}> Đã hủy
+                    <input class="form-check-input" type="radio" name="status" id="" value="2"{{$order->status == 3 ? 'checked': ''}}> Đang vận chuyển
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="status" id="" value="3"{{$order->status == 4 ? 'checked': ''}}> Đã giao hàng
                 </label>
             </div>
         </div>
