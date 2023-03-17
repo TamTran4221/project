@@ -85,11 +85,7 @@ class LoginController extends Controller
             }
         }
     }
-
-    public function registerCustomer(Request $request) {
-        // Kiểm tra dữ liệu nhập vào
-        
-    }
+    
     public function loginCustomer(Request $request) {
         // Kiểm tra dữ liệu nhập vào
         $rules = [
@@ -145,7 +141,6 @@ class LoginController extends Controller
             // Nếu dữ liệu hợp lệ sẽ kiểm tra trong csdl
             $email = $request->input('email');
             $password = $request->input('password');
-     
             if( Auth::attempt(['email' => $email, 'password' =>$password, 'status' => 1])) {
                 // Kiểm tra đúng email và mật khẩu sẽ chuyển trang
                 session(['account' => Auth::user()]);
@@ -159,10 +154,12 @@ class LoginController extends Controller
         }
     }
     public function logoutCustomer() {
+        Auth::logout();
         session()->forget('account');
         return redirect('/home');
     }
     public function logoutCheckout() {
+        Auth::logout();
         session()->forget('account');
         return redirect('/cart/checkout');
     }
