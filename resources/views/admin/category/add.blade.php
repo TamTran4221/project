@@ -37,7 +37,7 @@
                             </div>
                         
                             <span class="input-group-append mt-3">
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="submit" class="btn btn-primary">Thêm mới</button>
                             </span>
                         </form>
                     </div>

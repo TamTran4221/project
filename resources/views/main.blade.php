@@ -7,7 +7,7 @@
             <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
                 aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0"
-                href=" /admin "
+                href="/admin"
                 target="_blank">
                 <img src="{{ url('template/admin') }}/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold text-white">Material Dashboard 2 PRO</span>
@@ -17,11 +17,18 @@
         <div class="collapse navbar-collapse w-auto h-auto ps" id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item mb-2 mt-0">
-                    <a data-bs-toggle="collapse" href="" class="nav-link text-white" aria-controls="ProfileNav"
-                        role="button" aria-expanded="false">
-                        <img src="{{ url('template/admin') }}/assets/img/team-3.jpg" class="avatar">
-                        <span class="nav-link-text ms-2 ps-1">Brooklyn Alice</span>
+                    <a class="nav-link text-white" data-bs-toggle="collapse" aria-expanded="false" href="#profileExample" aria-controls="ProfileNav" role="button">
+                        <span class="nav-link-text ms-2 ps-1">{{ session('user')->name }}</span>
                     </a>
+                    <div class="collapse " id="profileExample">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link text-white " href="{{route('login')}}">
+                                    <span class="sidenav-normal  ms-2  ps-1">logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <hr class="horizontal light mt-0">
                 <li class="nav-item">

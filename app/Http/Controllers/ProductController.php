@@ -6,6 +6,7 @@ use App\Http\Requests\ValidateRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
@@ -39,8 +40,6 @@ class ProductController extends Controller
      */
     public function store(ValidateRequest $request)
     {
-       
-
         if($request->hasFile('file')){
             $file = $request->file;
             $fileName = $file->getClientOriginalName();
@@ -49,6 +48,7 @@ class ProductController extends Controller
             $request->merge(['image'=>$fileName]);
         }
         Product::create($request->all());
+        Session::flash('success', 'Thêm mới thành công!');
         return redirect()->route('product.index');
         
     }
@@ -99,6 +99,7 @@ class ProductController extends Controller
         
         try {
             $product->update($request->all());
+            Session::flash('success', 'Đã cập nhật!');
             return redirect()->route('product.index');
         } catch (\Throwable $th) {
             //throw $th;
@@ -116,6 +117,7 @@ class ProductController extends Controller
     {
         try {
             Product::find($id)->delete();
+            Session::flash('success', 'Xóa thành công!');
             return redirect()->back();
          } catch (\Throwable $th) {
              //throw $th;

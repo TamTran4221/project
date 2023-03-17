@@ -379,7 +379,12 @@
         integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
         data-cf-beacon='{"rayId":"7a7b1ec8cc5b6e49","version":"2023.2.0","r":1,"token":"1b7cbb72744b40c580f8633c6b62637e","si":100}'
         crossorigin="anonymous"></script>
-        
+    <script>
+        function removeMess() {
+            const element = document.getElementById("mess");
+            element.remove();
+        }
+    </script>
 </body>
 
 </html>

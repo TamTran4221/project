@@ -61,7 +61,6 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $cate = Category::find($id);
-
         return view('admin.category.edit',compact('cate'),['title'=> 'Chỉnh sửa danh mục']);
     }
 

@@ -18,11 +18,14 @@ class Order extends Model
     }
     public function scopeSearch($query)
      {
-        if ($key = request()->key) {
+        $key = request()->key;
+        if ($key != null) {
             $users = User::where('name','like','%'.$key.'%')->get();
+            $user_id = [];
             foreach ($users as  $value) {
-                $query = $query ->where('user_id','=',$value->id);
+                array_push($user_id, $value->id);
             }
+            $query = $query ->whereIn('user_id', $user_id);
         }
         return $query;
      }

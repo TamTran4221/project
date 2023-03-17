@@ -7,24 +7,6 @@
 
             <div class="col large-3 hide-for-medium ">
                 <div id="shop-sidebar" class="sidebar-inner col-inner">
-                    <aside id="woocommerce_product_search-2" class="widget woocommerce widget_product_search">
-                        <form role="search" method="get" class="searchform"
-                            action="">
-                            <div class="flex-row relative">
-                                <div class="flex-col flex-grow">
-                                    <input type="search" class="search-field mb-0" name="s" value=""
-                                        placeholder="Tìm kiếm&hellip;" />
-                                    <input type="hidden" name="post_type" value="product" />
-                                </div><!-- .flex-col -->
-                                <div class="flex-col">
-                                    <button type="submit"
-                                        class="ux-search-submit submit-button secondary button icon mb-0">
-                                        <i class="icon-search"></i> </button>
-                                </div><!-- .flex-col -->
-                            </div><!-- .flex-row -->
-                            <div class="live-search-results text-left z-top"></div>
-                        </form>
-                    </aside>
                     <aside id="nav_menu-2" class="widget widget_nav_menu"><span class="widget-title shop-sidebar">Danh mục sản phẩm</span>
                         <div class="is-divider small"></div>
                         <div class="menu-danh-muc-san-pham-vertical-menu-container">

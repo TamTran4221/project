@@ -22,7 +22,7 @@ class Cart {
                 'name' => $product->name,
                 'image' => $product->image,
                 'price' => $product->sale_price ? $product->sale_price : $product->price,
-                'quantity' => 1
+                'quantity' => $quantity
             ];
 
             $this->items[$product->id] = $cart_item;

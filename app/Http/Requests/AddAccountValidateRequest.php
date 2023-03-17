@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ValidateRequest extends FormRequest
+class AddAccountValidateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,16 +25,19 @@ class ValidateRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'price' => 'required|numeric',
+            'email' => 'required|email|unique:users',
+            'password' => 'required',
         ];
     }
     public function messages()
     {
         return [
-            'name.required'=>'Tên sản phẩm không rỗng',
+            'name.required'=>'Tên tài khoản không được để trống',
             'name.unique'=>$this->name.' đã tồn tại',
-            'price.required'=> 'Giá sản phẩm không rỗng',
-            'email.required'=>'Tên sản phẩm không rỗng',
+            'email.required'=>'Tài khoản không được để trống',
+            'email.email'=>'Tài khoản sai định dạng',
+            'email.unique'=>'Tài khoản đã tồn tại',
+            'password.required'=>'Mật khẩu không được để trống',
         ];
     }
 }

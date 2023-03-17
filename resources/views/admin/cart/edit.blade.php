@@ -2,25 +2,25 @@
 @section('noidung')
 <?php //Hiển thị thông báo thành công?>
 @if ( Session::has('success') )
-	<div class="alert alert-success alert-dismissible" role="alert">
-		<strong>{{ Session::get('success') }}</strong>
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			<span class="sr-only">Close</span>
-		</button>
-	</div>
-@endif
+        <div class="alert alert-success alert-dismissible" id="mess" role="alert">
+            <strong>{{ Session::get('success') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" onclick="removeMess()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+        </div>
+    @endif
 
-<?php //Hiển thị thông báo lỗi?>
-@if ( Session::has('error') )
-	<div class="alert alert-danger alert-dismissible" role="alert">
-		<strong>{{ Session::get('error') }}</strong>
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			<span class="sr-only">Close</span>
-		</button>
-	</div>
-@endif
+    <?php //Hiển thị thông báo lỗi?>
+    @if ( Session::has('error') )
+        <div class="alert alert-danger alert-dismissible" id="mess" role="alert">
+            <strong>{{ Session::get('error') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" onclick="removeMess()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+        </div>
+    @endif
 
 <?php //Hiển thị form sửa sản phẩm?>
 @include('alert')
@@ -38,7 +38,7 @@
                             @method('PUT')
                             <div class="input-group input-group-static mb-4">
                                 <label>Tên khách hàng</label>
-                                <input type="text" value="{{$order->user->name}}" name="" class="form-control">
+                                <span class="form-control" >{{$order->user->name}}</span>
                             </div>
                             <div class="input-group input-group-static mb-4">
                                 <label>Địa chỉ</label>
