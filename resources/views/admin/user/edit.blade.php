@@ -2,22 +2,22 @@
 @section('noidung')
 <?php //Hiển thị thông báo thành công?>
 @if ( Session::has('success') )
-	<div class="alert alert-success alert-dismissible" role="alert">
+	<div class="alert alert-success alert-dismissible" id="mess" role="alert">
 		<strong>{{ Session::get('success') }}</strong>
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
-			<span class="sr-only">Close</span>
+			<span class="sr-only" onclick="removeMess()" >Close</span>
 		</button>
 	</div>
 @endif
 
 <?php //Hiển thị thông báo lỗi?>
 @if ( Session::has('error') )
-	<div class="alert alert-danger alert-dismissible" role="alert">
+	<div class="alert alert-danger alert-dismissible" id="mess" role="alert">
 		<strong>{{ Session::get('error') }}</strong>
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
-			<span class="sr-only">Close</span>
+			<span class="sr-only" onclick="removeMess()">Close</span>
 		</button>
 	</div>
 @endif
@@ -28,7 +28,7 @@
     <div class="container-fluid py-4">
         <div class="row min-vh-80">
             <div class="col-lg-8 col-md-10 col-12 m-auto">
-                <h3 class="mt-3 mb-0 text-center">CHỈNH SỬA SẢN PHẨM</h3>
+                <h3 class="mt-3 mb-0 text-center">CHỈNH SỬA TÀI KHOẢN</h3>
                 <p class="lead font-weight-normal opacity-8 mb-7 text-center">
                 </p>
                 <div class="card">
@@ -69,7 +69,7 @@
                                 <input type="text" class="form-control" placeholder="Xác nhận mật khẩu..." name="confim_password">
                             </div>
                             <span class="input-group-append mt-3">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </span>
                         </form>
                     </div>

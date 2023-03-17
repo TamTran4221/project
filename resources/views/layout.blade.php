@@ -743,43 +743,22 @@
                         <!-- Left Elements -->
                         <div class="flex-col hide-for-medium flex-left
             ">
-                            <ul class="header-nav header-nav-main nav nav-left  nav-divided nav-uppercase">
-                                <li class="header-search-form search-form html relative has-icon">
-                                    <div class="header-search-form-wrapper">
-                                        <div class="searchform-wrapper ux-search-box relative form-flat is-normal">
-                                            <form role="search" method="get" class="searchform"
-                                                action="">
-                                                <div class="flex-row relative">
-                                                    <div class="flex-col flex-grow">
-                                                        <input type="search" class="search-field mb-0"
-                                                            name="key" value=""
-                                                            placeholder="Tìm kiếm&hellip;" />
-                                                        <input type="hidden" name="post_type" value="product" />
-                                                    </div><!-- .flex-col -->
-                                                    <div class="flex-col">
-                                                        <button type="submit"
-                                                            class="ux-search-submit submit-button secondary button icon mb-0">
-                                                            <i class="icon-search"></i> </button>
-                                                    </div><!-- .flex-col -->
-                                                </div><!-- .flex-row -->
-                                                <div class="live-search-results text-left z-top"></div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+
                         </div>
 
                         <!-- Right Elements -->
                         <div class="flex-col hide-for-medium flex-right">
                             <ul class="header-nav header-nav-main nav nav-right  nav-divided nav-uppercase">
                                 <li class="account-item has-icon ">
-                                    <a href="" class="nav-top-link nav-top-not-logged-in "
-                                        data-open="#login-form-popup">
-                                        <span>
-                                            Đăng nhập </span>
-
-                                    </a><!-- .account-login-link -->
+                                    @if (session('account'))
+                                        <a href="{{route('customer.logout')}}" class="nav-top-link nav-top-not-logged-in">
+                                            <span>Chào, {{ session('account')->name }}</span>
+                                        </a>
+                                    @else
+                                        <a href="" class="nav-top-link nav-top-not-logged-in" data-open="#login-form-popup">
+                                            <span> Đăng nhập </span>
+                                        </a><!-- .account-login-link -->
+                                    @endif
                                 </li>
                                 <li class="cart-item has-icon has-dropdown">
 
@@ -1145,32 +1124,18 @@
         <div class="account-container lightbox-inner">
             <div class="account-login-inner">
                 <h3 class="uppercase">Đăng nhập</h3>
-                <form class="woocommerce-form woocommerce-form-login login" method="post">
+                <form class="woocommerce-form woocommerce-form-login login" action="{{route('customer.login')}}"  method="post">
                     @csrf
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label for="username">Tên tài khoản hoặc địa chỉ email <span
-                                class="required">*</span></label>
-                        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text"
-                            name="email" id="username" value="" />
+                        <label for="username">Tên tài khoản hoặc địa chỉ email <span class="required">*</span></label>
+                        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="username" value="" />
                     </p>
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                         <label for="">Mật khẩu <span class="required">*</span></label>
-                        <input class="woocommerce-Input woocommerce-Input--text input-text" type="password"
-                            name="password" id="password" />
+                        <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
                     </p>
                     <p class="form-row">
-                        <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce"
-                            value="a08ac36765" /><input type="hidden" name="_wp_http_referer"
-                            value="" /> <button type="submit" class="woocommerce-Button button"
-                            name="" value="Đăng nhập">Đăng nhập</button>
-                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
-                            <input class="woocommerce-form__input woocommerce-form__input-checkbox"
-                                name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Ghi
-                                nhớ mật khẩu</span>
-                        </label>
-                    </p>
-                    <p class="woocommerce-LostPassword lost_password">
-                        <a href="tai-khoan/lost-password/index.html">Quên mật khẩu?</a>
+                        <button type="submit" class="woocommerce-Button button">Đăng nhập</button>
                     </p>
                 </form>
             </div><!-- .login-inner -->
@@ -1411,6 +1376,21 @@
             document.body.appendChild(e);
         };
     </script>
+    <script>
+        function removeMess() {
+            const element = document.getElementById("mess");
+            element.remove();
+        }
+        function showForm() {
+                const element = document.getElementById("checkout_login");
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+        }
+    </script>
+    @yield('custom_js')
 </body>
 
 </html>

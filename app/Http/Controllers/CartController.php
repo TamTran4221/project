@@ -23,7 +23,7 @@ class CartController extends Controller
 
     public function add(Cart $cart, Product $product)
     {
-         $cart->addToCart($product);
+        $cart->addToCart($product,request()->quantity);
 
        return redirect()->route('cart.view')->with('success','Sản phẩm đã được thêm vào giỏ hàng');
     }

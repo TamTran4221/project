@@ -34,7 +34,11 @@ Route::get('detail/{id}',[LayoutController::class,'detail'])->name('detail');
 Route::get('/product/{slug}',[LayoutController::class,'category'])->name('category');
 Route::get('news',[LayoutController::class,'news'])->name('news');
 
-
+// đăng nhập customer
+Route::post('/login',[LoginController::class,'loginCustomer'])->name('customer.login');
+Route::get('/logout',[LoginController::class,'logoutCustomer'])->name('customer.logout');
+Route::post('/login/checkout',[LoginController::class,'loginCheckout'])->name('checkout.login');
+Route::get('/logout/checkout',[LoginController::class,'logoutCheckout'])->name('checkout.logout');
 
 // đăng nhập admin
 Route::get('/admin',[LoginController::class,'index'])->name('login');
@@ -58,6 +62,6 @@ Route::group(['prefix' => 'cart'], function() {
   Route::get('add/{product}', [CartController::class, 'add'])->name('cart.add');
   Route::get('remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
   Route::get('update/{id}', [CartController::class, 'update'])->name('cart.update');
-    Route::get('clear', [CartController::class, 'clear'])->name('cart.clear');
+  Route::get('clear', [CartController::class, 'clear'])->name('cart.clear');
 
 });

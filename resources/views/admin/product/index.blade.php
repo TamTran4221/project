@@ -4,28 +4,26 @@
     <?php //Hiển thị thông báo thành công
     ?>
 
-    @if (Session::has('success'))
-        <div class="alert alert-success alert-dismissible" role="alert">
+    @if ( Session::has('success') )
+        <div class="alert alert-success alert-dismissible" id="mess" role="alert">
             <strong>{{ Session::get('success') }}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button type="button" class="close" data-dismiss="alert" onclick="removeMess()" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 <span class="sr-only">Close</span>
             </button>
         </div>
     @endif
 
-    <?php //Hiển thị thông báo lỗi
-    ?>
-    @if (Session::has('error'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
+    <?php //Hiển thị thông báo lỗi?>
+    @if ( Session::has('error') )
+        <div class="alert alert-danger alert-dismissible" id="mess" role="alert">
             <strong>{{ Session::get('error') }}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button type="button" class="close" data-dismiss="alert" onclick="removeMess()" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 <span class="sr-only">Close</span>
             </button>
         </div>
     @endif
-
     <?php //Hiển thị danh sách sản phẩm
     ?>
     <!-- Left col -->
@@ -110,14 +108,14 @@
                                         <td><img src="{{url('uploads')}}/{{$value->image}}" alt="" width="100px"></td>
                                         <td>{{ $value->category->name}}</td>
                                         <td>
-                                            <a href="{{ route('product.edit', $value) }}" class="btn btn-primary">Edit</a>
+                                            <a href="{{ route('product.edit', $value) }}" class="btn btn-primary">Sửa</a>
                                         </td>
                                         <td>
                                             <form action="{{ route('product.destroy', $value) }}" method="POST"
                                                 onsubmit="return confirm('Bạn thực sự muốn xóa sản phẩm này?')">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">DELETE</button>
+                                                <button type="submit" class="btn btn-danger">Xóa</button>
                                             </form>
                                         </td>
                                     </tr>

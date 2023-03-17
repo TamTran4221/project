@@ -88,12 +88,9 @@
                                             action="{{route('cart.add',$pro->id)}}"
                                             method="" enctype='multipart/form-data'>
                                             <div class="quantity buttons_added">
-                                                <input type="button" value="-" class="minus button is-form"> <label
-                                                    class="screen-reader-text" for="quantity_640600e41268c">Số lượng</label>
-                                                <input type="number" id="quantity_640600e41268c"
-                                                    class="input-text qty text" step="1" min="1" max="9999"
-                                                    name="quantity" value="1" title="SL" size="4"
-                                                    pattern="[0-9]*" inputmode="numeric" aria-labelledby="" />
+                                                <input type="button" value="-" class="minus button is-form">
+                                                <label class="screen-reader-text" for="quantity_640600e41268c">Số lượng</label>
+                                                <input type="number" id="quantity_product" class="input-text qty" name="quantity" value="1" min="1">
                                                 <input type="button" value="+" class="plus button is-form">
                                             </div>
 

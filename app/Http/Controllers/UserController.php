@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Session;
+use App\Http\Requests\AccountValidateRequest;
+use App\Http\Requests\AddAccountValidateRequest;
 
 class UserController extends Controller
 {
@@ -43,9 +46,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddAccountValidateRequest $request)
     {
         $this->user->add($request);
+        Session::flash('success', 'Thêm mới thành công!');
         return redirect()->route('user.index');
     }
 
@@ -68,11 +72,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AccountValidateRequest $request, $id)
     {
         if ($this->user->add($request, $id)) {
+            Session::flash('success', 'Sửa thành công!');
             return redirect()->route('user.index');
         } else {
+            Session::flash('error', 'Email mật khẩu không đúng hoặc sai xác nhận mặt khẩu!');
             return back()->withInput();
         }
     }

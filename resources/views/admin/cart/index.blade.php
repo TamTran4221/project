@@ -3,22 +3,21 @@
     <?php //Hiển thị thông báo thành công
     ?>
 
-    @if (Session::has('success'))
-        <div class="alert alert-success alert-dismissible" role="alert">
+@if ( Session::has('success') )
+        <div class="alert alert-success alert-dismissible" id="mess" role="alert">
             <strong>{{ Session::get('success') }}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button type="button" class="close" data-dismiss="alert" onclick="removeMess()" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 <span class="sr-only">Close</span>
             </button>
         </div>
     @endif
 
-    <?php //Hiển thị thông báo lỗi
-    ?>
-    @if (Session::has('error'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
+    <?php //Hiển thị thông báo lỗi?>
+    @if ( Session::has('error') )
+        <div class="alert alert-danger alert-dismissible" id="mess" role="alert">
             <strong>{{ Session::get('error') }}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button type="button" class="close" data-dismiss="alert" onclick="removeMess()" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 <span class="sr-only">Close</span>
             </button>
@@ -64,8 +63,16 @@
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
                 <div class="input-group input-group-outline">
-                    <label class="form-label">Search here</label>
-                    <input type="text" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
+                    <form action="">
+                        <div class="input-group">
+                            <input type="search" class="form-control form-control-lg" placeholder="Nhập từ khóa tìm kiếm" name="key">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-lg btn-default">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

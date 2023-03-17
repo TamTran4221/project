@@ -3,22 +3,22 @@
 @section('noidung')
 <?php //Hiển thị thông báo thành công?>
 @if ( Session::has('success') )
-	<div class="alert alert-success alert-dismissible" role="alert">
+	<div class="alert alert-success alert-dismissible" id="mess" role="alert">
 		<strong>{{ Session::get('success') }}</strong>
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
-			<span class="sr-only">Close</span>
+			<span class="sr-only" onclick="removeMess()" >Close</span>
 		</button>
 	</div>
 @endif
 
 <?php //Hiển thị thông báo lỗi?>
 @if ( Session::has('error') )
-	<div class="alert alert-danger alert-dismissible" role="alert">
+	<div class="alert alert-danger alert-dismissible" id="mess" role="alert">
 		<strong>{{ Session::get('error') }}</strong>
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
-			<span class="sr-only">Close</span>
+			<span class="sr-only" onclick="removeMess()">Close</span>
 		</button>
 	</div>
 @endif
@@ -68,7 +68,7 @@
                                 <textarea class="form-control" name="description" id="" cols="30" rows="15" value="{{$product->description }}">{{$product->description }}</textarea>
                             </div>
                             <span class="input-group-append mt-3">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </span>
                         </form>
                     </div>
