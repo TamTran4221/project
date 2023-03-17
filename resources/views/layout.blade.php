@@ -699,6 +699,10 @@
         .label-popular.menu-item>a:after {
             content: "Popular";
         }
+
+        .error {
+            color: red;
+        }
     </style>
 </head>
 
@@ -707,8 +711,6 @@
     <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
 
     <div id="wrapper">
-
-
         <header id="header" class="header has-sticky sticky-jump">
             <div class="header-wrapper">
                 <div id="masthead" class="header-main show-logo-center">
@@ -1124,15 +1126,17 @@
         <div class="account-container lightbox-inner">
             <div class="account-login-inner">
                 <h3 class="uppercase">Đăng nhập</h3>
-                <form class="woocommerce-form woocommerce-form-login login" action="{{route('customer.login')}}"  method="post">
+                <form class="woocommerce-form woocommerce-form-login login" action="{{route('customer.login')}}" id="login_form"  method="post">
                     @csrf
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label for="username">Tên tài khoản hoặc địa chỉ email <span class="required">*</span></label>
-                        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="username" value="" />
+                        <label for="username">Tên tài khoản<span class="required">*</span></label>
+                        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="login_email" value="" />
+                        <small class="error"></small>
                     </p>
                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                         <label for="">Mật khẩu <span class="required">*</span></label>
-                        <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
+                        <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="login_password" />
+                        <small class="error"></small>
                     </p>
                     <p class="form-row">
                         <button type="submit" class="woocommerce-Button button">Đăng nhập</button>
@@ -1140,7 +1144,149 @@
                 </form>
             </div><!-- .login-inner -->
         </div><!-- .account-login-container -->
+        <div class="account-container lightbox-inner">
+            <div class="account-login-inner">
+                <h3 class="uppercase">Đăng ký</h3>
+                <form class="woocommerce-form woocommerce-form-login login" id="register_form" action="{{route('customer.register')}}"  method="post">
+                    @csrf
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="username">Tên<span class="required">*</span></label>
+                        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="name" id="register_name" />
+                        <small class="error"></small>
+                    </p>
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="username">Tên tài khoản<span class="required">*</span></label>
+                        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="register_email" />
+                        <small class="error">
+                            @if ( Session::has('error') )
+                                {{ Session::get('error') }}
+                            @endif
+                        </small>
+                    </p>
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="">Mật khẩu <span class="required">*</span></label>
+                        <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="register_password" />
+                        <input type="hidden" name="status" value="1">
+                        <small class="error"></small>
+                    </p>
+                    <p class="form-row">
+                        <button type="submit" class="woocommerce-Button button">Đăng ký</button>
+                    </p>
+                </form>
+            </div><!-- .register-inner -->
+        </div><!-- .account-login-container -->
     </div>
+    <script>
+        const usernameEl = document.querySelector('#register_name');
+        const emailEl = document.querySelector('#register_email');
+        const emailElG = document.querySelector('#login_email');
+        const passwordEl = document.querySelector('#register_password');
+        const passwordElG = document.querySelector('#login_password');
+        const form = document.querySelector('#register_form');
+        const formLogin = document.querySelector('#login_form');
+        const isRequired = value => value === '' ? false : true;
+        const isEmailValid = (email) => {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        };
+        const showError = (input, message) => {
+            // get the form-field element
+            const formField = input.parentElement;
+            const error = formField.querySelector('small.error');
+            error.textContent = message;
+        };
+        const hiddenError = (input) => {
+            // get the form-field element
+            const formField = input.parentElement;
+            const error = formField.querySelector('small.error');
+            error.textContent = '';
+        };
+        const checkUsername = () => {
+            let valid = false;
+            const username = usernameEl.value.trim();
+            if (!isRequired(username)) {
+                showError(usernameEl, 'Tên không được để chống.');
+            } else {
+                hiddenError(usernameEl);
+                valid = true;
+            }
+            return valid;
+        }
+        const checkEmail = () => {
+            let valid = false;
+            const email = emailEl.value.trim();
+            if (!isRequired(email)) {
+                showError(emailEl, 'Tài khoản không được để trống.');
+            } else if (!isEmailValid(email)) {
+                showError(emailEl, 'Tài khoản sai định dạng.')
+            } else {
+                hiddenError(emailEl);
+                valid = true;
+            }
+            return valid;
+        }
+        const checkPassword = () => {
+            let valid = false;
+            const password = passwordEl.value.trim();
+            if (!isRequired(password)) {
+                showError(passwordEl, 'Mật khẩu không được để chống.');
+            } else {
+                hiddenError(passwordEl);
+                valid = true;
+            }
+            return valid;
+        }
+        form.addEventListener('submit', function (e) {
+            // validate forms
+            let isUsernameValid = checkUsername(),
+                isPasswordValid = checkPassword(),
+                isEmailValid = checkEmail();
+
+            let isFormValid = isUsernameValid && isEmailValid && isPasswordValid;
+            // submit to the server if the form is valid
+            if (!isFormValid) {
+                e.preventDefault();
+            }
+        });
+
+
+        // validate login
+        const checkEmailLogin = () => {
+            let valid = false;
+            const email = emailElG.value.trim();
+            if (!isRequired(email)) {
+                showError(emailElG, 'Tài khoản không được để trống.');
+            } else if (!isEmailValid(email)) {
+                showError(emailElG, 'Tài khoản sai định dạng.')
+            } else {
+                hiddenError(emailElG);
+                valid = true;
+            }
+            return valid;
+        }
+        const checkPasswordLogin = () => {
+            let valid = false;
+            const password = passwordElG.value.trim();
+            if (!isRequired(password)) {
+                showError(passwordElG, 'Mật khẩu không được để chống.');
+            } else {
+                hiddenError(passwordElG);
+                valid = true;
+            }
+            return valid;
+        }
+        formLogin.addEventListener('submit', function (e) {
+            // validate forms
+            let isPasswordValid = checkPasswordLogin(),
+                isEmailValid = checkEmailLogin();
+
+            let isFormValid = isEmailValid && isPasswordValid;
+            // submit to the server if the form is valid
+            if (!isFormValid) {
+                e.preventDefault();
+            }
+        });
+    </script>
     <script type='text/javascript'>
         /* <![CDATA[ */
         var wpcf7 = {
@@ -1390,7 +1536,6 @@
                 }
         }
     </script>
-    @yield('custom_js')
 </body>
 
 </html>

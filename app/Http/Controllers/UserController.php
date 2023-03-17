@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\AccountValidateRequest;
 use App\Http\Requests\AddAccountValidateRequest;
+
+use function PHPUnit\Framework\isEmpty;
 
 class UserController extends Controller
 {
@@ -53,6 +56,18 @@ class UserController extends Controller
         return redirect()->route('user.index');
     }
 
+    public function registerCustomer(Request $request) {
+        $users = User::Where('email',$request->email)->get();
+        if (!$users->all()) {
+            $this->user->add($request);
+            Session::flash('success', 'Tạo tài khoản và đăng nhập thành công!');
+            return redirect()->route('home');
+        } else {
+            Session::flash('error', 'Email dã tồn tại!');
+            return back()->withInput();
+        }
+    }
+    
     /**
      * Show the form for editing the specified resource.
      *

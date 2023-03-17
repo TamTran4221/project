@@ -91,6 +91,8 @@ class User extends Authenticatable
             $data->request->remove('password');
             $data->merge(['password'=>$password]);
             $this->create($data->all());
+            $object = (object)$data->all();
+            session(['account' => $object]);
         } else {
             if ($this->checkPass($data)) {
                 $data->request->remove('old_password');

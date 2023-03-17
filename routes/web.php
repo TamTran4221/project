@@ -9,6 +9,7 @@ use App\Http\Controllers\Ordercontroller;
 use App\Http\Controllers\OrderManagerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,7 @@ Route::get('/product/{slug}',[LayoutController::class,'category'])->name('catego
 Route::get('news',[LayoutController::class,'news'])->name('news');
 
 // đăng nhập customer
+Route::post('/register',[UserController::class,'registerCustomer'])->name('customer.register');
 Route::post('/login',[LoginController::class,'loginCustomer'])->name('customer.login');
 Route::get('/logout',[LoginController::class,'logoutCustomer'])->name('customer.logout');
 Route::post('/login/checkout',[LoginController::class,'loginCheckout'])->name('checkout.login');
